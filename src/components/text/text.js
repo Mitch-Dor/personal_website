@@ -1,0 +1,2 @@
+export const EDUCATION_TEXT = `I am a 2025 graduate from Lehigh University. I graduated with a 3.71 GPA with a major in Computer Science in the Rossin College of Engineering. I also
+graduated with minors in Spanish & Music.`;
