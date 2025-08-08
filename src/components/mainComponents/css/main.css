@@ -36,11 +36,15 @@ body::-webkit-scrollbar {
 }
 
 .section {
-    height: calc(100vh + var(--blackIntermediateLength));
+    height: var(--sectionHeight);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 20px;
+}
+
+.spacer {
+    height: var(--spacerHeight);
 }
 
 .textSection {

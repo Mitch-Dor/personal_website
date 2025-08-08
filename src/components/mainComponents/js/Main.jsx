@@ -6,11 +6,12 @@ import '../css/main.css'
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
   const viewportHeight = window.innerHeight;
-  const addedBlackIntermediate = 250;
-  const sectionHeight = viewportHeight + addedBlackIntermediate;
-  const endSectionOne = sectionHeight;
-  const endSectionTwo = sectionHeight * 2;
-  const endSectionThree = sectionHeight * 3;
+  const baseSectionHeight = viewportHeight;
+  const spacerDist = 300;
+  const sectionHeight = baseSectionHeight;
+  const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
+  const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
+  const endSectionThree = sectionHeight * 3 + (spacerDist*5)/2;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,21 +40,15 @@ function Main() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Trigger once on mount
-    document.documentElement.style.setProperty('--blackIntermediateLength', `${addedBlackIntermediate}px`);
+    document.documentElement.style.setProperty('--sectionHeight', `${sectionHeight}px`);
+    document.documentElement.style.setProperty('--spacerHeight', `${spacerDist}px`);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  function checkIfInbetween() {
-    console.log(scrollPoint, endSectionOne, endSectionTwo, endSectionThree);
-    if (Math.abs(scrollPoint - (endSectionOne-addedBlackIntermediate/2)) <= addedBlackIntermediate/2 || Math.abs(scrollPoint - endSectionTwo) <= addedBlackIntermediate/2 || Math.abs(scrollPoint - endSectionThree) <= addedBlackIntermediate/2){
-      return true;
-    }
-    return false;
-  }
-
   return (
     <>
-      <div id="backgroundImageDisplay" className={`${checkIfInbetween() ? 'inbetweenBlack' : scrollPoint < endSectionOne ? 'educationSection' : scrollPoint < endSectionTwo ? 'codingSection' : 'thirdSection'}`}></div>
+      {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
+      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'codingSection' : 'thirdSection'}`}></div>
       <div id="mainContainer">
         <div id="education" className="section">
           <div className="textSection scale-on-scroll" id="educationInformation">
@@ -63,6 +58,7 @@ function Main() {
             <img src="./assets/me/Grad.png"></img>
           </div>
         </div>
+        <div className="spacer"></div>
         <div id="secondSection" className="section">
           <div className="textSection scale-on-scroll" id="educationInformation">
             { EDUCATION_TEXT }
@@ -70,7 +66,17 @@ function Main() {
           <div className="imageDisplay scale-on-scroll" id="professionalImage">
             <img src="./assets/me/Grad.png"></img>
           </div>
-        </div>\
+        </div>
+        <div className="spacer"></div>
+        <div id="thirdSection" className="section">
+          <div className="textSection scale-on-scroll" id="educationInformation">
+            { EDUCATION_TEXT }
+          </div>
+          <div className="imageDisplay scale-on-scroll" id="professionalImage">
+            <img src="./assets/me/Grad.png"></img>
+          </div>
+        </div>
+        <div className="spacer"></div>
       </div>
     </>
   );
