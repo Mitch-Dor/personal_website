@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { EDUCATION_TEXT } from '../../text/text';
+import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT } from '../../text/text';
+import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
+import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import '../css/main.css'
 
 function Main() {
@@ -48,17 +50,76 @@ function Main() {
   return (
     <>
       {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
-      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'codingSection' : 'thirdSection'}`}></div>
+      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}></div>
       <div id="mainContainer">
-        <div id="education" className="section">
-          <div className="textSection scale-on-scroll" id="educationInformation">
-            { EDUCATION_TEXT }
+        {/* START INTRO SECTION */}
+        <div id="intro" className="section">
+          <div className="headerBar">
+            <div className="smallHeaderText">Computer Science Engineer</div>
+            <div className="largeHeaderText">Mitchell Dorward</div>
+            <div className="smallHeaderText">Special Interest In Full-Stack Development</div>
           </div>
-          <div className="imageDisplay scale-on-scroll" id="professionalImage">
-            <img src="./assets/me/Grad.png"></img>
+          <div className="introContent">
+            <div className="introLeft">
+              < RainbowRippleBackground />
+              <div className="scale-on-scroll introImage">
+                <div className="imageDisplay bobbing1" id="introImage">
+                  <img src="./assets/me/Grad.png"></img>
+                </div>
+              </div>
+              <div className="introMainContent">
+                <ImageCarousel />
+                <div className="scale-on-scroll introText">
+                  <div className="textBlob bobbing2">
+                    { INTRO_TEXT }
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sections">
+              <div className="sectionLink">Education</div>
+              <div className="sectionLink">Personal Projects</div>
+              <div className="sectionLink">Work History</div>
+            </div>
           </div>
         </div>
+        {/* END INTRO SECTION */}
         <div className="spacer"></div>
+        {/* START EDUCATION SECTION */}
+        <div id="education" className="section">
+          <div className="textSection" id="educationInformation">
+            <div className="rowSection">
+              <div className="scale-on-scroll">
+                <div className="textBlob bobbing1">
+                  <h3 className='title'>Education</h3>
+                  { EDUCATION_TEXT }
+                </div>
+              </div>
+              <div className="scale-on-scroll">
+                <div className="textBlob bobbing2">
+                  <h3 className='title'>Beyond Classes</h3>
+                  { BEYOND_CLASSES_TEXT }
+                </div>
+              </div>
+            </div>
+            <div className="rowSection">
+              <div className="scale-on-scroll">
+                <div className='textBlob bobbing1'>
+                  <h3 className='title'>Extracurriculars</h3>
+                  {EXTRACURRICULARS_TEXT}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="scale-on-scroll">
+            <div className="imageDisplay bobbing2" id="professionalImage">
+              <img src="./assets/me/Grad.png"></img>
+            </div>
+          </div>
+        </div>
+        {/* END EDUCATION SECTION */}
+        <div className="spacer"></div>
+        {/* START UNITE-PRO SECTION */}
         <div id="secondSection" className="section">
           <div className="textSection scale-on-scroll" id="educationInformation">
             { EDUCATION_TEXT }
@@ -67,6 +128,7 @@ function Main() {
             <img src="./assets/me/Grad.png"></img>
           </div>
         </div>
+        {/* END UNITE-PRO SECTION */}
         <div className="spacer"></div>
         <div id="thirdSection" className="section">
           <div className="textSection scale-on-scroll" id="educationInformation">
