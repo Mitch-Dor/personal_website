@@ -9,3 +9,8 @@ by creating autograders for the different assignments. These autograders were al
 and fielded questions from students taking the class.`;
 export const EXTRACURRICULARS_TEXT = `I participated in many different music ensembles for the entirety of my stay at Lehigh: Brass Ensemble, Wind Ensemble,
 Marching 97, & Jazz Orchestra.`;
+export const UNITE_PRO_TEXT = `This is my project that I have taken the furthest. It is a live website that you can find at unite-pro.net! The webapp that has two main draws; 1: it
+serves as a draft sim where users can practice drafting alone, with others online, or versus an AI. 2: I use this webapp to store and do data anlysis on pro matches. These are two
+niches that are completely unfilled anywhere else in the Pokemon Unite community so I wanted to create the webapp for myself and others to use. The Webapp is hosted on Heroku with
+a database on Supabase. The webapp is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
+attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`

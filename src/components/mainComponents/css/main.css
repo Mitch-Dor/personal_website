@@ -20,7 +20,8 @@ body::-webkit-scrollbar {
 }
 
 #backgroundImageDisplay.introSection {
-    background-image: linear-gradient(to bottom right, rgb(50, 46, 63), rgb(101, 8, 108));;
+    /* background-image: linear-gradient(to bottom right, rgb(50, 46, 63), rgb(101, 8, 108)); */
+    background-image: url('/assets/backgrounds/intro.png');
 }
 
 #backgroundImageDisplay.educationSection {

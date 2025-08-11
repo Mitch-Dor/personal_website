@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT } from '../../text/text';
+import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT } from '../../text/text';
 import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import '../css/main.css'
@@ -47,6 +47,13 @@ function Main() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleScroll = (targetY) => {
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
@@ -77,9 +84,9 @@ function Main() {
               </div>
             </div>
             <div className="sections">
-              <div className="sectionLink">Education</div>
-              <div className="sectionLink">Personal Projects</div>
-              <div className="sectionLink">Work History</div>
+              <div className="sectionLink" onClick={() => handleScroll(endSectionOne + spacerDist/2)}>Education</div>
+              <div className="sectionLink" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Personal Projects</div>
+              <div className="sectionLink" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
             </div>
           </div>
         </div>
@@ -121,9 +128,12 @@ function Main() {
         <div className="spacer"></div>
         {/* START UNITE-PRO SECTION */}
         <div id="secondSection" className="section">
-          <div className="textSection scale-on-scroll" id="educationInformation">
-            { EDUCATION_TEXT }
-          </div>
+          <div className="scale-on-scroll">
+                <div className="textBlob bobbing1">
+                  <h3 className='title'>Unite-Pro.net</h3>
+                  { UNITE_PRO_TEXT }
+                </div>
+              </div>
           <div className="imageDisplay scale-on-scroll" id="professionalImage">
             <img src="./assets/me/Grad.png"></img>
           </div>
