@@ -201,66 +201,6 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
-.carousel {
-  position: relative;   /* for arrows positioning */
-  width: 100%;
-  max-width: 600px;     /* optional max width */
-  height: 400px;        /* fixed height */
-  margin: 0 auto;
-  z-index: 5;
-}
-
-.carousel .slick-list {
-  height: 100%;         /* fill container height */
-  overflow: hidden;     /* clip overflowing slides/arrows */
-}
-
-.slick-initialized {
-    height: 100%;
-}
-
-.slick-track {
-    width: 100%;
-    height: 100%;
-}
-
-.carousel .slick-slide {
-  height: 100% !important;  /* ensure slides fill height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carouselImageContainer {
-  width: 100%;
-  height: 100%;
-}
-
-.carouselImageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.carousel .slick-prev {
-  left: 10px;
-}
-
-.carousel .slick-next {
-  right: 10px;
-}
-
-.carousel .slick-prev,
-.carousel .slick-next {
-  z-index: 9999 !important;
-  pointer-events: auto !important; /* ensure they can receive clicks */
-}
-
-.carousel .slick-dots {
-  bottom: 10px; /* moves dots up inside the container */
-}
-
 .sections {
     height: calc(100% - 10px);
     width: calc(15% - 10px);
