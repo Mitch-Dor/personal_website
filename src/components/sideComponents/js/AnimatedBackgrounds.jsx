@@ -35,37 +35,6 @@ export default function AnimatedBackground({ section }) {
           backgroundColor: 0x59328b
         });
       break;
-      // case "introSection":
-      //   effect = BIRDS({
-      //     el: vantaRef.current,
-      //     THREE,
-      //     mouseControls: true,
-      //     touchControls: true,
-      //     gyroControls: false,
-      //     minHeight: 200.00,
-      //     minWidth: 200.00,
-      //     scale: 1.00,
-      //     scaleMobile: 1.00,
-      //     backgroundColor: 0x0f2036,
-      //     color1: 0x0e471f,
-      //     color2: 0x1b8895
-      //   });
-      //   break;
-      case "introSection":
-        effect = FOG({
-          el: vantaRef.current,
-          THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          highlightColor: 0x51dbcd,
-  midtoneColor: 0x51bdb7,
-  lowlightColor: 0x1fcccc,
-  baseColor: 0xffffff
-        })
-        break;
       case "educationSection":
         effect = WAVES({
           el: vantaRef.current,
@@ -77,7 +46,7 @@ export default function AnimatedBackground({ section }) {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x005188,
+          color: 0x43c59,
           waveHeight: 10.5,
           waveSpeed: 0.5,
           zoom: 0.97

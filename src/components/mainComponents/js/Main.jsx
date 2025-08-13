@@ -60,9 +60,9 @@ function Main() {
   return (
     <>
       {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
-      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}>
+      {/* <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}>
         <AnimatedBackground section={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`} />
-      </div>
+      </div> */}
       <div id="mainContainer">
         {/* START INTRO SECTION */}
         <div id="intro" className="section">
@@ -80,6 +80,22 @@ function Main() {
                 <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
               </div>
             </div>
+            <svg
+              viewBox="0 0 1440 100"
+              preserveAspectRatio="none"
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                height: '100px'
+              }}
+            >
+              <path
+                d="M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z"
+                fill="rgba(0,0,0,0.3)"
+              />
+            </svg>
           </div>
           <div className="introContent">
             <div className="scale-on-scroll introText">
@@ -93,9 +109,10 @@ function Main() {
           </div>
         </div>
         {/* END INTRO SECTION */}
-        <div className="spacer"></div>
+        <div className="spacer" id="firstSpacer"></div>
         {/* START EDUCATION SECTION */}
         <div id="education" className="section">
+          <AnimatedBackground section={"educationSection"} />
           <div className="textSection" id="educationInformation">
             <div className="rowSection">
               <div className="scale-on-scroll">
