@@ -1,4 +1,4 @@
-import 
+/* #106140, #104D61, #10615D, #106124, #103361, #2F615E */
 
 html, body {
     padding: 0;
@@ -69,6 +69,7 @@ body::-webkit-scrollbar {
 
 .textBlob {
     background-color: rgba(75, 75, 75, 0.8);
+    border: 2px solid white;
     border-radius: 10px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -103,6 +104,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
 }
 
 .imageDisplay img {
@@ -128,115 +130,6 @@ body::-webkit-scrollbar {
 @keyframes bob2 {
   0%, 100% { transform: translate(0, 0); }
   50% { transform: translate(-3px, 8px); }
-}
-
-#intro {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.headerBar {
-    width: calc(100% - 20px);
-    height: calc(15% - 20px);
-    background-color: rgba(80, 38, 115, 0.497);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.smallHeaderText {
-    width: 25%;
-    font-size: 1.25rem;
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.largeHeaderText {
-    width: 50%;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.introContent {
-    height: 85%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    z-index: 1;
-}
-
-.introLeft {
-    height: 100%;
-    width: 85%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: -2;
-}
-
-.introImage {
-    width: 40%;
-}
-
-.introText {
-    width: 100%;
-}
-
-.introMainContent {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.sections {
-    height: calc(100% - 10px);
-    width: calc(15% - 10px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(21, 21, 94, 0.385);
-    margin-right: 10px;
-    border-radius: 10px;
-}
-
-.sectionLink {
-    width: 100%;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.25rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.invisible {
-    display: none;
-}
-
-#education {
-
-}
-
-
-#professionalImage {
-    max-height: 400px;
-    max-width: 300px;
-    transform: scale(var(--scale, 1));
 }
 
 .scale-on-scroll {

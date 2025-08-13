@@ -5,6 +5,9 @@
   height: 400px;        /* fixed height */
   margin: 0 auto;
   z-index: 5;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: black;
 }
 
 .carousel .slick-list {
@@ -31,12 +34,13 @@
 .carouselImageContainer {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .carouselImageContainer img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
 }
 
@@ -58,7 +62,7 @@
   bottom: 10px; /* moves dots up inside the container */
 }
 
-.screenCover {
+.screenfill {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,7 +80,8 @@
     width: 50%;
     height: 50%;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid black 2px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -107,5 +112,32 @@
 .imageContainer img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
+}
+
+.imageDesc {
+  position: absolute;
+  width: 100%;
+  height: 5% !important;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.carousel .slick-slide {
+  height: 100% !important;
+  display: flex;
+}
+
+.carousel .slick-slide div {
+  width: 100%;
+  height: 100%;
 }

@@ -5,13 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/imageCarousel.css";
 
-export default function ImageCarousel() {
+export default function ImageCarousel({ images }) {
   const [expandedImage, setExpandedImage] = useState(null);
-  const images = [
-    "/assets/carousel/breloom.gif",
-    "/assets/carousel/loudred.gif",
-    "/assets/carousel/spheal.gif",
-  ];
 
   const settings = {
     dots: true,          
@@ -32,7 +27,8 @@ export default function ImageCarousel() {
             <div className="expandedImageClose" onClick={() => {setExpandedImage(null)}}>
               <VscClose className="closeIcon" />
             </div>
-            <img src={expandedImage}></img>
+            <img src={expandedImage.src}></img>
+            <div className="imageDesc">{expandedImage.desc}</div>
           </div>
         </div>
       )}
@@ -40,7 +36,8 @@ export default function ImageCarousel() {
           <Slider {...settings}>
           {images.map((src, i) => (
               <div key={i} className="carouselImageContainer">
-                  <img src={src} onClick={() => {setExpandedImage(src)}} alt={`Slide ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src={src.img} onClick={() => {setExpandedImage(src)}} alt={`Slide ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'fill' }} />
+                  <div className="imageDesc">{src.desc}</div>
               </div>
           ))}
           </Slider>

@@ -14,3 +14,14 @@ serves as a draft sim where users can practice drafting alone, with others onlin
 niches that are completely unfilled anywhere else in the Pokemon Unite community so I wanted to create the webapp for myself and others to use. The Webapp is hosted on Heroku with
 a database on Supabase. The webapp is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
 attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`
+
+
+
+{/* Lehigh, Monroe Energy, Data Annotation, Unite-Pro, Capstone */}
+export const INTRO_CAROUSEL = [
+    {img: '/assets/carousel/intro/Lehigh.jpg', desc: 'Graduated from Lehigh in 2025 with a Bachelors in Computer Science from the Rossin College of Engineering.'},
+    {img: '/assets/carousel/intro/Monroe.jpg', desc: 'Summer internship at Monroe Energy / MIPC during Summer 2024'},
+    {img: '/assets/carousel/intro/DA.jpg', desc: 'Started working for Data Annotation in Winter of 2025.'},
+    {img: '/assets/carousel/intro/unite-pro.png', desc: 'Passion project that acts as a draft sim and also performs data collection & analysis for pro matches.'},
+    {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project that I worked on for 1 year. Webapp to help students and advisors communicate / make schedules.'}
+]

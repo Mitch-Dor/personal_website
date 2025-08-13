@@ -1,0 +1,5 @@
+#professionalImage {
+    max-height: 400px;
+    max-width: 300px;
+    transform: scale(var(--scale, 1));
+}

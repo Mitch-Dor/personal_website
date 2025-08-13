@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT } from '../../text/text';
+import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, INTRO_CAROUSEL } from '../../constants/constants';
 import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
-import '../css/main.css'
+import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
+import '../css/main-core.css';
+import '../css/main-education.css';
+import '../css/main-intro.css';
 
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
@@ -57,36 +60,35 @@ function Main() {
   return (
     <>
       {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
-      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}></div>
+      <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}>
+        <AnimatedBackground section={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`} />
+      </div>
       <div id="mainContainer">
         {/* START INTRO SECTION */}
         <div id="intro" className="section">
           <div className="headerBar">
-            <div className="smallHeaderText">Computer Science Engineer</div>
-            <div className="largeHeaderText">Mitchell Dorward</div>
-            <div className="smallHeaderText">Special Interest In Full-Stack Development</div>
-          </div>
-          <div className="introContent">
-            <div className="introLeft">
-              < RainbowRippleBackground />
-              <div className="scale-on-scroll introImage">
-                <div className="imageDisplay bobbing1" id="introImage">
-                  <img src="./assets/me/Grad.png"></img>
-                </div>
-              </div>
-              <div className="introMainContent">
-                <ImageCarousel />
-                <div className="scale-on-scroll introText">
-                  <div className="textBlob bobbing2">
-                    { INTRO_TEXT }
-                  </div>
-                </div>
+            <div className="headerBGTransition"></div>
+            <AnimatedBackground section={"headerBar"} />
+            <div className="headerPhoto bobbing2">
+              <img src="./assets/me/Grad.png"></img>
+            </div>
+            <div className="headerTextPortion">
+              <div className="headerName">Mitchell Dorward</div>
+              <div className="links">
+                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionOne + spacerDist/2)}>Education</div>
+                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Personal Projects</div>
+                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
               </div>
             </div>
-            <div className="sections">
-              <div className="sectionLink" onClick={() => handleScroll(endSectionOne + spacerDist/2)}>Education</div>
-              <div className="sectionLink" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Personal Projects</div>
-              <div className="sectionLink" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
+          </div>
+          <div className="introContent">
+            <div className="scale-on-scroll introText">
+              <div className="textBlob bobbing2">
+                { INTRO_TEXT }
+              </div>
+            </div>
+            <div className="scale-on-scroll introCarousel">
+              <ImageCarousel images={INTRO_CAROUSEL} />
             </div>
           </div>
         </div>
