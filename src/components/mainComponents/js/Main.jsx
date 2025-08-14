@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, INTRO_CAROUSEL } from '../../constants/constants';
+import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, SKILLS, INTRO_CAROUSEL } from '../../constants/constants';
+import { PiTagChevronFill } from "react-icons/pi";
 import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -98,12 +99,22 @@ function Main() {
             </svg>
           </div>
           <div className="introContent">
-            <div className="scale-on-scroll introText">
-              <div className="textBlob bobbing2">
-                { INTRO_TEXT }
+            <div className="skillsArea">
+              <div className="skillsTitle">Skills</div>
+              <div className="skillsList">
+                {SKILLS.map((skill) => {
+                  return (
+                    <div className="skillListItem">
+                      <PiTagChevronFill className="skillListItemTab" />
+                      <div className="skillListItemText">
+                        {skill}
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             </div>
-            <div className="scale-on-scroll introCarousel">
+            <div className="introCarousel">
               <ImageCarousel images={INTRO_CAROUSEL} />
             </div>
           </div>

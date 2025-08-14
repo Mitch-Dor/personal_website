@@ -16,6 +16,16 @@ a database on Supabase. The webapp is completely stateless and employs AI techni
 attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`
 
 
+export const SKILLS = [
+    "Frontend Skills: React.js, Vue.js, JavaScript, CSS, HTML, jQuery, ", 
+    "Backend Skills: RESTful APIs, C++, C, SQL, Database Structure, ",
+    "Data Structures: Linked List, Queue, Priority Queue, Stack, Trees, Binary Search Trees (BSTs), ",
+    "AI Techniques: Finite State Machines (FSMs), A* Search, Generative Algorithms, ",
+    "Machine Learning Techniques: ",
+    "Other Languages: Rust, ",
+    "Other Technologies: Excel, CAD, "
+]
+
 
 {/* Lehigh, Monroe Energy, Data Annotation, Unite-Pro, Capstone */}
 export const INTRO_CAROUSEL = [
