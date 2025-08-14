@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, SKILLS, INTRO_CAROUSEL } from '../../constants/constants';
 import { PiTagChevronFill } from "react-icons/pi";
+import { LiaChevronUpSolid } from "react-icons/lia";
+import { LiaChevronDownSolid } from "react-icons/lia";
 import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -11,6 +13,7 @@ import '../css/main-intro.css';
 
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
+  const listRef = useRef(null);
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
   const spacerDist = 300;
@@ -57,6 +60,18 @@ function Main() {
       behavior: "smooth",
     });
   };
+  
+  const moveTraitsUp = () => {
+    if (listRef.current) {
+      listRef.current.scrollBy({ top: -60, behavior: "smooth" });
+    }
+  };
+
+  const moveTraitsDown = () => {
+    if (listRef.current) {
+      listRef.current.scrollBy({ top: 60, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -89,7 +104,7 @@ function Main() {
                 bottom: 0,
                 left: 0,
                 width: '100%',
-                height: '100px'
+                height: '50px'
               }}
             >
               <path
@@ -99,9 +114,28 @@ function Main() {
             </svg>
           </div>
           <div className="introContent">
+            <svg
+              viewBox="0 0 1440 100"
+              preserveAspectRatio="none"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '50px'
+              }}
+            >
+              <path
+                d="M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z"
+                fill="#2B1844"
+                transform="rotate(180 720 50)"
+              />
+            </svg>
             <div className="skillsArea">
+              <LiaChevronUpSolid className="skillsUp" onClick={() => {moveTraitsUp()}} />
+              <LiaChevronDownSolid className="skillsDown" onClick={() => {moveTraitsDown()}} />
               <div className="skillsTitle">Skills</div>
-              <div className="skillsList">
+              <div className="skillsList" ref={listRef} >
                 {SKILLS.map((skill) => {
                   return (
                     <div className="skillListItem">
