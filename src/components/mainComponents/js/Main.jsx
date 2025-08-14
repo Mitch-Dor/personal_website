@@ -7,6 +7,8 @@ import { LiaChevronDownSolid } from "react-icons/lia";
 import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
+import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
+import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
@@ -16,7 +18,7 @@ function Main() {
   const listRef = useRef(null);
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
-  const spacerDist = 300;
+  const spacerDist = 100;
   const sectionHeight = baseSectionHeight;
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
   const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
@@ -83,7 +85,6 @@ function Main() {
         {/* START INTRO SECTION */}
         <div id="intro" className="section">
           <div className="headerBar">
-            <div className="headerBGTransition"></div>
             <AnimatedBackground section={"headerBar"} />
             <div className="headerPhoto bobbing2">
               <img src="./assets/me/Grad.png"></img>
@@ -96,41 +97,10 @@ function Main() {
                 <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
               </div>
             </div>
-            <svg
-              viewBox="0 0 1440 100"
-              preserveAspectRatio="none"
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                width: '100%',
-                height: '50px'
-              }}
-            >
-              <path
-                d="M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z"
-                fill="rgba(0,0,0,0.3)"
-              />
-            </svg>
+            <WaveSeparatorTop color={"#2C2C2C"} />
           </div>
           <div className="introContent">
-            <svg
-              viewBox="0 0 1440 100"
-              preserveAspectRatio="none"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '50px'
-              }}
-            >
-              <path
-                d="M0,50 C360,150 1080,-50 1440,50 L1440,100 L0,100 Z"
-                fill="#2B1844"
-                transform="rotate(180 720 50)"
-              />
-            </svg>
+            <WaveSeparatorBottom color={"#2C2C2C"} />
             <div className="skillsArea">
               <LiaChevronUpSolid className="skillsUp" onClick={() => {moveTraitsUp()}} />
               <LiaChevronDownSolid className="skillsDown" onClick={() => {moveTraitsDown()}} />
@@ -154,9 +124,12 @@ function Main() {
           </div>
         </div>
         {/* END INTRO SECTION */}
-        <div className="spacer" id="firstSpacer"></div>
+        <div className="spacer" id="firstSpacer">
+          <WaveSeparatorTop color={"#2C2C2C"} />
+        </div>
         {/* START EDUCATION SECTION */}
         <div id="education" className="section">
+          <WaveSeparatorBottom color={"#2C2C2C"} />
           <AnimatedBackground section={"educationSection"} />
           <div className="textSection" id="educationInformation">
             <div className="rowSection">

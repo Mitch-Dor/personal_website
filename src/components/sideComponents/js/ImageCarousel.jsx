@@ -9,7 +9,7 @@ export default function ImageCarousel({ images }) {
   const [expandedImage, setExpandedImage] = useState(null);
 
   const settings = {
-    dots: true,          
+    // dots: true,          
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -27,8 +27,8 @@ export default function ImageCarousel({ images }) {
             <div className="expandedImageClose" onClick={() => {setExpandedImage(null)}}>
               <VscClose className="closeIcon" />
             </div>
-            <img src={expandedImage.src}></img>
-            <div className="imageDesc">{expandedImage.desc}</div>
+            <img src={expandedImage.img}></img>
+            <div className="imageDesc" style={{width: 'calc(100% - 20px)'}}>{expandedImage.desc}</div>
           </div>
         </div>
       )}

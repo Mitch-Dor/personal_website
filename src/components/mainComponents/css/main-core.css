@@ -46,10 +46,11 @@ body::-webkit-scrollbar {
 
 .spacer {
     height: var(--spacerHeight);
+    position: relative;
 }
 
 #firstSpacer { 
-    background-color: #bdbdbd;
+    background-color: #f7f7f7;
 }
 
 .textSection {

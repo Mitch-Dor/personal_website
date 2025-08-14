@@ -31,9 +31,11 @@ export default function AnimatedBackground({ section }) {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x19774b,
-          backgroundColor: 0x59328b
-        });
+          color: 0xb0bec5,
+          color2: 0xffffff,
+          size: 2,
+          backgroundColor: 0x00796b
+        })
       break;
       case "educationSection":
         effect = WAVES({
