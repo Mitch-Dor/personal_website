@@ -10,15 +10,14 @@
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    text-shadow:
-        -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px  1px 0 black,
-        1px  1px 0 black;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
 }
 
-.educationMiddle .contactItem {
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+.educationTop .contactItem {
+    color: black;
+    text-shadow: 3px 3px 6px rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .contactItem img {

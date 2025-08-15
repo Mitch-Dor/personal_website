@@ -19,6 +19,14 @@
     position: relative;
 }
 
+.educationContactMe {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    top: 0;
+    right: 0;
+}
+
 .educationMiddle {
     height: 30%;
     width: 100%;

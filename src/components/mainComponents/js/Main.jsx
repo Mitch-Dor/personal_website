@@ -130,6 +130,9 @@ function Main() {
         {/* START EDUCATION SECTION */}
         <div id="education" className="section">
           <div className="educationTop">
+            <div className="educationContactMe">
+              < ContactBar />
+            </div>
           </div>
           <div className="educationMiddle">
               {/* <AnimatedBackground section={"educationSection"} /> */}
@@ -139,9 +142,6 @@ function Main() {
                 <div id="degreeInformation">
                   <div id="minors">Minors in Music & Spanish</div>
                   <div id="GPA">GPA: 3.71</div>
-                </div>
-                <div className="contactMe">
-                  < ContactBar />
                 </div>
               </div>
           </div>
