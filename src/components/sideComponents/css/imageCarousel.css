@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
   background-color: black;
@@ -18,30 +17,41 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transform: var(--transformDirection);
 }
 
 .carouselSlide.active {
+  transform: translateX(0%);
   opacity: 1;
   z-index: 1;
+}
+
+.carouselSlide.slide-out-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.carouselSlide.slide-out-right {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .carouselSlide img {
   width: auto;
   max-width: 100%;
-  height: calc(100% - 40px); /* subtract the height of the description */
-  max-height: calc(90%);     /* ensures image never exceeds 90% */
+  height: 82%; 
   object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
 .imageDesc {
-  flex: 0 0 40px; /* fixed height for description */
+  height: 18%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -77,4 +87,39 @@
 
 .arrow.right {
   right: 10px;
+}
+
+.screenCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.imageContainer {
+  height: 50%;
+  width: 50%;
+  transform: translateX(50%) translateY(50%);
+  background-color: black;
+  border-radius: 15px;
+}
+
+.closePopUp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(61, 61, 61, 0.5);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 6;
 }
