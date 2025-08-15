@@ -1,24 +1,21 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, SKILLS, INTRO_CAROUSEL } from '../../constants/constants';
-import { PiTagChevronFill } from "react-icons/pi";
-import { LiaChevronUpSolid } from "react-icons/lia";
-import { LiaChevronDownSolid } from "react-icons/lia";
-import RainbowRippleBackground from '../../sideComponents/js/RainbowRippleBackground';
+import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL } from '../../constants/constants';
+
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
 import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
 import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
+import Listing from '../../sideComponents/js/Listing';
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
 
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
-  const listRef = useRef(null);
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
-  const spacerDist = 100;
+  const spacerDist = 300;
   const sectionHeight = baseSectionHeight;
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
   const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
@@ -62,25 +59,9 @@ function Main() {
       behavior: "smooth",
     });
   };
-  
-  const moveTraitsUp = () => {
-    if (listRef.current) {
-      listRef.current.scrollBy({ top: -60, behavior: "smooth" });
-    }
-  };
-
-  const moveTraitsDown = () => {
-    if (listRef.current) {
-      listRef.current.scrollBy({ top: 60, behavior: "smooth" });
-    }
-  };
 
   return (
     <>
-      {/*                                             Add viewportHeight/2 so transition happens when spacer is in middle of screen, not on top. */}
-      {/* <div id="backgroundImageDisplay" className={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`}>
-        <AnimatedBackground section={`${(endSectionOne - (scrollPoint + viewportHeight/2) > 0) ? 'introSection' : (endSectionTwo - (scrollPoint + viewportHeight/2) > 0) ? 'educationSection' : 'unite-proSection'}`} />
-      </div> */}
       <div id="mainContainer">
         {/* START INTRO SECTION */}
         <div id="intro" className="section">
@@ -102,21 +83,7 @@ function Main() {
           <div className="introContent">
             <WaveSeparatorBottom color={"#2C2C2C"} />
             <div className="skillsArea">
-              <LiaChevronUpSolid className="skillsUp" onClick={() => {moveTraitsUp()}} />
-              <LiaChevronDownSolid className="skillsDown" onClick={() => {moveTraitsDown()}} />
-              <div className="skillsTitle">Skills</div>
-              <div className="skillsList" ref={listRef} >
-                {SKILLS.map((skill) => {
-                  return (
-                    <div className="skillListItem">
-                      <PiTagChevronFill className="skillListItemTab" />
-                      <div className="skillListItemText">
-                        {skill}
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              < Listing listing={SKILLS} title="Skills" />
             </div>
             <div className="introCarousel">
               <ImageCarousel images={INTRO_CAROUSEL} />
@@ -125,42 +92,34 @@ function Main() {
         </div>
         {/* END INTRO SECTION */}
         <div className="spacer" id="firstSpacer">
-          <WaveSeparatorTop color={"#2C2C2C"} />
         </div>
         {/* START EDUCATION SECTION */}
         <div id="education" className="section">
-          <WaveSeparatorBottom color={"#2C2C2C"} />
-          <AnimatedBackground section={"educationSection"} />
-          <div className="textSection" id="educationInformation">
-            <div className="rowSection">
-              <div className="scale-on-scroll">
-                <div className="textBlob bobbing1">
-                  <h3 className='title'>Education</h3>
-                  { EDUCATION_TEXT }
+          <div className="educationTop">
+          </div>
+          <div className="educationMiddle">
+              {/* <AnimatedBackground section={"educationSection"} /> */}
+              <img id="lehighLogo" src="assets/lehighLogo.png" alt="Lehigh Logo"></img>
+              <div id="educationMiddleContent">
+                <div id="major">Bachelor's of Computer Science from the Rossin College of Engineering</div>
+                <div id="degreeInformation">
+                  <div id="minors">Minors in Music & Spanish</div>
+                  <div id="GPA">GPA: 3.71</div>
                 </div>
               </div>
-              <div className="scale-on-scroll">
-                <div className="textBlob bobbing2">
-                  <h3 className='title'>Beyond Classes</h3>
-                  { BEYOND_CLASSES_TEXT }
-                </div>
-              </div>
+          </div>
+          <div className="educationBottom">
+            <div id="TAList" className="educationList">
+              < Listing listing={TA_TAKEAWAYS} title="Accomplishments as a CSE348 GameAI Grader" color={"#663700"} />
             </div>
-            <div className="rowSection">
-              <div className="scale-on-scroll">
-                <div className='textBlob bobbing1'>
-                  <h3 className='title'>Extracurriculars</h3>
-                  {EXTRACURRICULARS_TEXT}
-                </div>
-              </div>
+            <div className="educationCarousel">
+              <ImageCarousel images={EDUCATION_CAROUSEL} />
+            </div>
+            <div id="ClassesList" className="educationList">
+              < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
             </div>
           </div>
-          <div className="scale-on-scroll">
-            <div className="imageDisplay bobbing2" id="professionalImage">
-              <img src="./assets/me/Grad.png"></img>
-            </div>
-          </div>
-        </div>
+        </div> 
         {/* END EDUCATION SECTION */}
         <div className="spacer"></div>
         {/* START UNITE-PRO SECTION */}

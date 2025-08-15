@@ -38,21 +38,22 @@ export default function AnimatedBackground({ section }) {
         })
       break;
       case "educationSection":
-        effect = WAVES({
+        effect = BIRDS({
           el: vantaRef.current,
           THREE,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x43c59,
-          waveHeight: 10.5,
-          waveSpeed: 0.5,
-          zoom: 0.97
-        });
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          backgroundColor: 0xd9d9d9,
+          color1: 0x00796b,
+          color2: 0xe790e,
+          separation: 50.00,
+          backgroundAlpha: 0.00
+        })
         break;
       case "unite-proSection":
         effect = NET({

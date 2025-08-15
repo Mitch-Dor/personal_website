@@ -1,3 +1,4 @@
+// Text Blurbs
 export const INTRO_TEXT = `I'm Mitchell Dorward. A recent graduate from Lehigh University who grew up in Pottstown, PA and recently moved to Knoxville, TN. I have a passion for
 finding creative solutions to complex problems. I love to create products that real people can use to better engage with the things they love or need. Some of my best examples of this 
 are in my personal projects. I specialize in full-stack development and am intimately familiar with web technologies like Node.js, React.js, Vue.js, etc. as well as backend languages like
@@ -15,7 +16,7 @@ niches that are completely unfilled anywhere else in the Pokemon Unite community
 a database on Supabase. The webapp is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
 attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`
 
-
+// Listings
 export const SKILLS = [
     "Frontend Skills: React.js, Vue.js, JavaScript, CSS, HTML, jQuery, ", 
     "Backend Skills: RESTful APIs, C++, C, SQL, Database Structure, ",
@@ -25,13 +26,27 @@ export const SKILLS = [
     "Other Languages: Rust, ",
     "Other Technologies: Excel, CAD, "
 ]
+export const TA_TAKEAWAYS = [
+    `Increased grading efficiency by creating autograders that were easy to maintain.`,
+    `Made tests more dynamic by mathematically determining if a solution was correct rather than using arbitrary test cases.`,
+    `Increased student enjoyment by making autograders provide specific feedback on why tests failed.`,
+    `Improved student understanding by holding office hours where I would explain class topics and assignments.`
+]
+export const CLASSES = [
+    'Data Structures & Algorithms',
+
+]
 
 
-{/* Lehigh, Monroe Energy, Data Annotation, Unite-Pro, Capstone */}
+// Image Carousels
 export const INTRO_CAROUSEL = [
     {img: '/assets/carousel/intro/Lehigh.jpg', desc: 'Graduated from Lehigh in 2025 with a Bachelors in Computer Science from the Rossin College of Engineering.'},
     {img: '/assets/carousel/intro/Monroe.jpg', desc: 'Summer internship at Monroe Energy / MIPC during Summer 2024'},
     {img: '/assets/carousel/intro/DA.jpg', desc: 'Started working for Data Annotation in Winter of 2025.'},
     {img: '/assets/carousel/intro/unite-pro.png', desc: 'Passion project that acts as a draft sim and also performs data collection & analysis for pro matches.'},
     {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project that I worked on for 1 year. Webapp to help students and advisors communicate / make schedules.'}
+]
+export const EDUCATION_CAROUSEL = [
+    {img: '/assets//carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
+    {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
 ]

@@ -1,0 +1,86 @@
+.listContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.listTitle {
+    height: calc(20% - 30px);
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: verdana;
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #4DB6AC;
+    color: white;
+}
+
+.listList {
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 5px 0px;
+    gap: 10px;
+}
+
+.listUp {
+    position: absolute;
+    top: calc(20% + 10px);
+    right: 20px;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.listDown {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.listList::-webkit-scrollbar {
+    display: none; 
+}
+
+.listItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* aligns icon and text vertically */
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 8px 12px; /* some breathing room */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.25), /* outer shadow */
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.listItemTab {
+    flex-shrink: 0;
+    font-size: 3em; /* relative to parent height */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #4DB6AC;
+    margin-right: 8px;
+    margin-left: -25px;
+}
+
+.listItemText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
