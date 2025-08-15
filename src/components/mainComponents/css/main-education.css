@@ -45,7 +45,7 @@
 }
 
 #major {
-    height: 50%;
+    height: 40%;
     width: 100%;
     font-size: 1.8rem;
     color: white;
@@ -61,14 +61,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 50%;
+    height: 25%;
     width: 100%;
 }
 
 #minors, #GPA {
     width: 50%;
     color: white;
-    font-size: 1rem;
+    font-size: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;

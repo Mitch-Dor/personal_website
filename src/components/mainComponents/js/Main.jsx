@@ -7,6 +7,7 @@ import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
 import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
 import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
 import Listing from '../../sideComponents/js/Listing';
+import ContactBar from '../../sideComponents/js/ContactBar';
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
@@ -17,40 +18,70 @@ function Main() {
   const baseSectionHeight = viewportHeight;
   const spacerDist = 300;
   const sectionHeight = baseSectionHeight;
+  const sectionAndSpacer = sectionHeight + spacerDist;
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
   const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
   const endSectionThree = sectionHeight * 3 + (spacerDist*5)/2;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPoint(window.scrollY);
+  /// Scale On Scroll Effect
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPoint(window.scrollY);
 
-      const elements = document.querySelectorAll('.scale-on-scroll');
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+  //     const elements = document.querySelectorAll('.scale-on-scroll');
+  //     elements.forEach(el => {
+  //       const rect = el.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;
 
-        // How far the element is from the center of the screen
-        const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
+  //       // How far the element is from the center of the screen
+  //       const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
 
-        // Normalize and clamp the scale factor between 0.8 and 1
-        const maxDistance = windowHeight / 2;
+  //       // Normalize and clamp the scale factor between 0.8 and 1
+  //       const maxDistance = windowHeight / 2;
     
-        let scale = Math.max(0.8, 1 - distanceFromCenter / maxDistance * 0.2);
-        if (maxDistance - distanceFromCenter < 120) {
-          scale = 1 - distanceFromCenter / maxDistance
-        }
+  //       let scale = Math.max(0.8, 1 - distanceFromCenter / maxDistance * 0.2);
+  //       if (maxDistance - distanceFromCenter < 120) {
+  //         scale = 1 - distanceFromCenter / maxDistance
+  //       }
 
-        el.style.setProperty('--scale', scale.toFixed(3));
-      });
+  //       el.style.setProperty('--scale', scale.toFixed(3));
+  //     });
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   handleScroll(); // Trigger once on mount
+  //   document.documentElement.style.setProperty('--sectionHeight', `${sectionHeight}px`);
+  //   document.documentElement.style.setProperty('--spacerHeight', `${spacerDist}px`);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
+
+  /// Snap to close sections effect
+  useEffect(() => {
+    const snapThreshold = 200; // px
+
+    let timeout;
+
+    const onScroll = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const y = window.scrollY;
+        const nearestMultiple = Math.round(y / sectionAndSpacer) * sectionAndSpacer;
+        const distance = nearestMultiple - y;
+
+        if (Math.abs(distance) <= snapThreshold) {
+          window.scrollTo({
+            top: nearestMultiple,
+            behavior: "smooth"
+          });
+        }
+      }, 80); // small delay after scroll ends
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Trigger once on mount
+    window.addEventListener("scroll", onScroll);
     document.documentElement.style.setProperty('--sectionHeight', `${sectionHeight}px`);
     document.documentElement.style.setProperty('--spacerHeight', `${spacerDist}px`);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const handleScroll = (targetY) => {
@@ -72,6 +103,9 @@ function Main() {
             </div>
             <div className="headerTextPortion">
               <div className="headerName">Mitchell Dorward</div>
+              <div className="contactMe">
+                < ContactBar />
+              </div>
               <div className="links">
                 <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionOne + spacerDist/2)}>Education</div>
                 <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Personal Projects</div>
@@ -105,6 +139,9 @@ function Main() {
                 <div id="degreeInformation">
                   <div id="minors">Minors in Music & Spanish</div>
                   <div id="GPA">GPA: 3.71</div>
+                </div>
+                <div className="contactMe">
+                  < ContactBar />
                 </div>
               </div>
           </div>

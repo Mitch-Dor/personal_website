@@ -47,6 +47,7 @@ export const INTRO_CAROUSEL = [
     {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project that I worked on for 1 year. Webapp to help students and advisors communicate / make schedules.'}
 ]
 export const EDUCATION_CAROUSEL = [
-    {img: '/assets//carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
+    {img: '/assets/carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
     {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
+    {img: '/assets/carousel/education/breloom.gif', desc: 'Filler'}
 ]
