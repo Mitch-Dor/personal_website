@@ -11,12 +11,14 @@ import ContactBar from '../../sideComponents/js/ContactBar';
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
+import '../css/main-portfolio.css';
 
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
+  const [portfolioProject, setPortfolioProject] = useState("unite-pro");
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
-  const spacerDist = 300;
+  const spacerDist = 200;
   const sectionHeight = baseSectionHeight;
   const sectionAndSpacer = sectionHeight + spacerDist;
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
@@ -24,39 +26,6 @@ function Main() {
   const endSectionThree = sectionHeight * 3 + (spacerDist*5)/2;
   const navigate = useNavigate();
 
-  /// Scale On Scroll Effect
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollPoint(window.scrollY);
-
-  //     const elements = document.querySelectorAll('.scale-on-scroll');
-  //     elements.forEach(el => {
-  //       const rect = el.getBoundingClientRect();
-  //       const windowHeight = window.innerHeight;
-
-  //       // How far the element is from the center of the screen
-  //       const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
-
-  //       // Normalize and clamp the scale factor between 0.8 and 1
-  //       const maxDistance = windowHeight / 2;
-    
-  //       let scale = Math.max(0.8, 1 - distanceFromCenter / maxDistance * 0.2);
-  //       if (maxDistance - distanceFromCenter < 120) {
-  //         scale = 1 - distanceFromCenter / maxDistance
-  //       }
-
-  //       el.style.setProperty('--scale', scale.toFixed(3));
-  //     });
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-  //   handleScroll(); // Trigger once on mount
-  //   document.documentElement.style.setProperty('--sectionHeight', `${sectionHeight}px`);
-  //   document.documentElement.style.setProperty('--spacerHeight', `${spacerDist}px`);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
-  /// Snap to close sections effect
   useEffect(() => {
     const snapThreshold = 200; // px
 
@@ -147,7 +116,7 @@ function Main() {
           </div>
           <div className="educationBottom">
             <div id="TAList" className="educationList">
-              < Listing listing={TA_TAKEAWAYS} title="Accomplishments as a CSE348 GameAI Grader" color={"#663700"} />
+              < Listing listing={TA_TAKEAWAYS} title="Accomplishments as a CSE348 (GameAI) TA" color={"#663700"} />
             </div>
             <div className="educationCarousel">
               <ImageCarousel images={EDUCATION_CAROUSEL} />
@@ -158,20 +127,23 @@ function Main() {
           </div>
         </div> 
         {/* END EDUCATION SECTION */}
-        <div className="spacer"></div>
-        {/* START UNITE-PRO SECTION */}
-        <div id="secondSection" className="section">
-          <div className="scale-on-scroll">
-                <div className="textBlob bobbing1">
-                  <h3 className='title'>Unite-Pro.net</h3>
-                  { UNITE_PRO_TEXT }
-                </div>
-              </div>
-          <div className="imageDisplay scale-on-scroll" id="professionalImage">
-            <img src="./assets/me/Grad.png"></img>
+        <div className="spacer" id="secondSpacer"></div>
+        {/* START PORTFOLIO SECTION */}
+        <div id="portfolioSection" className="section">
+          <div className="portfolioTop">
+
+          </div>
+          <div className={`portfolioMiddle ${portfolioProject}`}>
+            <div className="portfolioProjectSelector">
+              <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
+              <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
+            </div>
+          </div>
+          <div className="portfolioBottom">
+
           </div>
         </div>
-        {/* END UNITE-PRO SECTION */}
+        {/* END PORTFOLIO SECTION */}
         <div className="spacer"></div>
         <div id="thirdSection" className="section">
           <div className="textSection scale-on-scroll" id="educationInformation">

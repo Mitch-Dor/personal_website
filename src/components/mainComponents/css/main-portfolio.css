@@ -1,0 +1,61 @@
+#portfolioSection {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolioTop {
+    width: 100%;
+    height: 10%;
+    background-color: #00796B;
+}
+
+.portfolioMiddle {
+    width: 100%;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.portfolioMiddle.unite-pro {
+    background-image: url('/assets/backgrounds/unite-pro.png');
+}
+
+.portfolioMiddle.enrolld {
+    background-image: url();
+}
+
+.portfolioProjectSelector {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolioProject {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.portfolioProject.selected {
+    text-decoration: underline;
+}
+
+.portfolioBottom {
+    width: 100%;
+    height: 50%;
+    background-color: #f7f7f7;
+}
