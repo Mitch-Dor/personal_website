@@ -1,4 +1,4 @@
-#portfolioSection {
+#workSection {
     padding: 0;
     margin: 0;
     display: flex;
@@ -8,13 +8,13 @@
     position: relative;
 }
 
-.portfolioTop {
+.workTop {
     width: 100%;
     height: 10%;
     background-color: #f7f7f7;
 }
 
-.portfolioContactBar {
+.workContactBar {
     width: 100%;
     height: 100%;
     display: flex;
@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-.portfolioMiddle {
+.workMiddle {
     width: 100%;
     height: 40%;
     background-repeat: no-repeat;
@@ -32,15 +32,15 @@
     transition: background-image 0.5s ease-in-out;
 }
 
-.portfolioMiddle.unite-pro {
-    background-image: url('/assets/backgrounds/unite-pro.png');
+.workMiddle.dataAnnotation {
+    background-image: url('/assets/backgrounds/DA.jpg');
 }
 
-.portfolioMiddle.enrolld {
-    background-image: url('/assets/backgrounds/enrolld.png');
+.workMiddle.monroeEnergy {
+    background-image: url('/assets/backgrounds/monroe.jpg');
 }
 
-.portfolioProjectSelector {
+.workExperienceSelector {
     height: 25%;
     width: 100%;
     display: flex;
@@ -50,7 +50,7 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.portfolioProject {
+.workExperience {
     height: 100%;
     width: 50%;
     display: flex;
@@ -64,7 +64,7 @@
     text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
-.portfolioProjectSelectorBar {
+.workExperienceSelectorBar {
     position: absolute;
     bottom: 0;
     height: 4px;
@@ -73,29 +73,29 @@
     transition: left 0.5s ease, right 0.5s ease;
 }
 
-.portfolioProjectSelectorBar.left {
+.workExperienceSelectorBar.left {
     left: 0;
     right: auto;
 }
 
-.portfolioProjectSelectorBar.right {
+.workExperienceSelectorBar.right {
     left: 50%;
     right: auto;
 }
 
-.portfolioProject.selected {
+.workExperience.selected {
     text-decoration: underline;
 }
 
-.portfolioBottom {
+.workBottom {
     width: 100%;
     height: 50%;
     background-color: #00796B;
     position: relative;
 }
 
-.portfolioContent {
-    height: 80%; /* 10% for top and extra for the project selector bar */
+.workContent {
+    height: 80%; /* 10% for top and extra for the work selector bar */
     width: 100%;
     position: absolute;
     top: 20%;
@@ -105,20 +105,20 @@
     align-items: center;
 }
 
-.portfolioContentDisplay {
+.workContentDisplay {
     height: 60%;
     width: 35%;
     position: relative;
 }
 
-#portfolioImageCarousel {
+#workImageCarousel {
     background: white; /* Or a subtle tinted background */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
     border-radius: 8px; /* rounded corners help */
     padding: 20px;
 }
 
-#portfolioList {
+#workList {
     background: white; /* Or a subtle tinted background */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
     border-radius: 8px; /* rounded corners help */

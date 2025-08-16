@@ -12,10 +12,12 @@ import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
 import '../css/main-portfolio.css';
+import '../css/main-workExperience.css';
 
 function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
   const [portfolioProject, setPortfolioProject] = useState("unite-pro");
+  const [workExperience, setWorkExperience] = useState("dataAnnotation");
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
   const spacerDist = 200;
@@ -137,6 +139,14 @@ function Main() {
               < ContactBar />
             </div>
           </div>
+          <div className="portfolioContent">
+            <div className="portfolioContentDisplay" id="portfolioImageCarousel">
+              <ImageCarousel images={EDUCATION_CAROUSEL} />
+            </div>
+            <div className="portfolioContentDisplay" id="portfolioList">
+              < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
+            </div>
+          </div>
           <div className={`portfolioMiddle ${portfolioProject}`}>
             <div className="portfolioProjectSelector">
               <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
@@ -144,28 +154,38 @@ function Main() {
               <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
             </div>
           </div>
-          <div className="portfolioBottom">
-            <div className="portfolioContent">
-              <div className="portfolioContentDisplay" id="portfolioImageCarousel">
-                <ImageCarousel images={EDUCATION_CAROUSEL} />
-              </div>
-              <div className="portfolioContentDisplay" id="portfolioList">
-                < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
-              </div>
-            </div>
-          </div>
+          <div className="portfolioBottom"></div>
         </div>
         {/* END PORTFOLIO SECTION */}
-        <div className="spacer"></div>
-        <div id="thirdSection" className="section">
-          <div className="textSection scale-on-scroll" id="educationInformation">
-            { EDUCATION_TEXT }
+        <div className="spacer" id="thirdSpacer">
+          <WaveSeparatorTop color={"#2C2C2C"} />
+        </div>
+        {/* BEGIN WORK EXPERIENCE SECTION */}
+        <div id="workSection" className="section">
+          <div className="workTop">
+            <div className="workContactBar">
+              < ContactBar />
+            </div>
           </div>
-          <div className="imageDisplay scale-on-scroll" id="professionalImage">
-            <img src="./assets/me/Grad.png"></img>
+          <div className="workContent">
+            <div className="workContentDisplay" id="workImageCarousel">
+              <ImageCarousel images={EDUCATION_CAROUSEL} />
+            </div>
+            <div className="workContentDisplay" id="workList">
+              < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
+            </div>
+          </div>
+          <div className={`workMiddle ${workExperience}`}>
+            <div className="workExperienceSelector">
+              <div className={`workExperience ${workExperience === 'dataAnnotation' ? 'selected' : ''}`} onClick={() => {setWorkExperience('dataAnnotation')}}>Data Annotation</div>
+              <div className={`workExperience ${workExperience === 'monroeEnergy' ? 'selected' : ''}`} onClick={() => {setWorkExperience('monroeEnergy')}}>Monroe Energy / MIPC</div>
+              <div className={`workExperienceSelectorBar ${workExperience === 'dataAnnotation' ? 'left' : 'right'}`}></div>
+            </div>
+          </div>
+          <div className="workBottom">
           </div>
         </div>
-        <div className="spacer"></div>
+        {/* END WORK EXPERIENCE SECTION */}
       </div>
     </>
   );
