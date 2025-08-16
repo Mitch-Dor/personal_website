@@ -53,7 +53,8 @@ body::-webkit-scrollbar {
 }
 
 #secondSpacer {
-    background: linear-gradient(#00796B, #f7f7f7);
+    background-color: #00796B;
+    /* background: linear-gradient(#00796B, #f7f7f7); */
 }
 
 .textSection {

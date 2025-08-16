@@ -127,7 +127,9 @@ function Main() {
           </div>
         </div> 
         {/* END EDUCATION SECTION */}
-        <div className="spacer" id="secondSpacer"></div>
+        <div className="spacer" id="secondSpacer">
+          <WaveSeparatorTop color={"#2C2C2C"} />
+        </div>
         {/* START PORTFOLIO SECTION */}
         <div id="portfolioSection" className="section">
           <div className="portfolioTop">
