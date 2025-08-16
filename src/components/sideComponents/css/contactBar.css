@@ -14,7 +14,7 @@
     font-weight: bold;
 }
 
-.educationTop .contactItem {
+.educationTop .contactItem, .portfolioTop .contactItem {
     color: black;
     text-shadow: 3px 3px 6px rgb(255, 255, 255);
     font-weight: bold;

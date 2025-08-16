@@ -131,16 +131,26 @@ function Main() {
         {/* START PORTFOLIO SECTION */}
         <div id="portfolioSection" className="section">
           <div className="portfolioTop">
-
+            <div className="portfolioContactBar">
+              < ContactBar />
+            </div>
           </div>
           <div className={`portfolioMiddle ${portfolioProject}`}>
             <div className="portfolioProjectSelector">
               <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
               <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
+              <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
             </div>
           </div>
           <div className="portfolioBottom">
-
+            <div className="portfolioContent">
+              <div className="portfolioContentDisplay" id="portfolioImageCarousel">
+                <ImageCarousel images={EDUCATION_CAROUSEL} />
+              </div>
+              <div className="portfolioContentDisplay" id="portfolioList">
+                < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
+              </div>
+            </div>
           </div>
         </div>
         {/* END PORTFOLIO SECTION */}
