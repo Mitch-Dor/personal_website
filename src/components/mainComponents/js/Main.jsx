@@ -184,23 +184,49 @@ function Main() {
             <div className="workContactBar">
               < ContactBar />
             </div>
+            <WaveSeparatorTop color={"#2C2C2C"} />
           </div>
           <div className="workContent">
-            <div className="workContentDisplay" id="workImageCarousel">
-              <ImageCarousel images={EDUCATION_CAROUSEL} />
+            <WaveSeparatorBottom color={"#2C2C2C"} />
+            <div className="DASection">
+              <div className="DALeft">
+                <div className="DALogo">
+                  <img src="/assets/DA.png"></img>
+                </div>
+                <div className="DAExampleTasks">
+                  < Listing listing={SKILLS} title="Example Tasks" />
+                </div>
+              </div>
+              <div className="DARight">
+                <div className="DAAchievements">
+                  < Listing listing={SKILLS} title="Achievements" />
+                </div>
+                <div className="DADescription">
+                  <div className="DADescTitle">
+                    DataAnnotation
+                  </div>
+                  Lorem Ipsom
+                </div>
+              </div>
             </div>
-            <div className="workContentDisplay" id="workList">
-              < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
+            <div className="MonroeSection">
+              <div className="MonroeSectionTop">
+                <div className="MonroeDescription">
+                  <div className="MonroeDescTitle">
+                    Monroe Energy
+                  </div>
+                  Lorem Ipsom
+                </div>
+                <div className="MonroeLogo">
+                  <img src="/assets/Monroe.png"></img>
+                </div>
+              </div>
+              <div className="MonroeSectionBottom">
+                <div className="MonroeAchievements">
+                  < Listing listing={SKILLS} title="Achievements" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className={`workMiddle ${workExperience}`}>
-            <div className="workExperienceSelector">
-              <div className={`workExperience ${workExperience === 'dataAnnotation' ? 'selected' : ''}`} onClick={() => {setWorkExperience('dataAnnotation')}}>Data Annotation</div>
-              <div className={`workExperience ${workExperience === 'monroeEnergy' ? 'selected' : ''}`} onClick={() => {setWorkExperience('monroeEnergy')}}>Monroe Energy / MIPC</div>
-              <div className={`workExperienceSelectorBar ${workExperience === 'dataAnnotation' ? 'left' : 'right'}`}></div>
-            </div>
-          </div>
-          <div className="workBottom">
           </div>
         </div>
         {/* END WORK EXPERIENCE SECTION */}
