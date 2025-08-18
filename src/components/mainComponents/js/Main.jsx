@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { INTRO_TEXT, EDUCATION_TEXT, BEYOND_CLASSES_TEXT, EXTRACURRICULARS_TEXT, UNITE_PRO_TEXT, SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL } from '../../constants/constants';
+import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_DESCRIPTION } from '../../constants/constants';
 
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -20,7 +20,7 @@ function Main() {
   const [workExperience, setWorkExperience] = useState("dataAnnotation");
   const viewportHeight = window.innerHeight;
   const baseSectionHeight = viewportHeight;
-  const spacerDist = 200;
+  const spacerDist = 100;
   const sectionHeight = baseSectionHeight;
   const sectionAndSpacer = sectionHeight + spacerDist;
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
@@ -140,21 +140,52 @@ function Main() {
             </div>
           </div>
           <div className="portfolioContent">
-            <div className="portfolioContentDisplay" id="portfolioImageCarousel">
-              <ImageCarousel images={EDUCATION_CAROUSEL} />
+            <div className="portfolioContentLeft">
+              {portfolioProject === 'unite-pro' ? (
+                <div className="projectContainer">
+                  <div className="portfolioContentDescription">
+                    <div className="descriptionTitle">Unite-Pro Description</div>
+                    {UNITE_PRO_DESCRIPTION}
+                    </div>
+                  <a className="liveLink" href="unite-pro.net">Unite-Pro.net</a>
+                  <div className="learnedFromProject">
+                    < Listing listing={SKILLS} title="Learned From Unite-Pro" />
+                  </div>
+                </div>
+              ) : (
+                <div className="projectContainer">
+                  <div className="portfolioContentDescription">
+                    <div className="descriptionTitle">Enrolld Description</div>
+                    {UNITE_PRO_DESCRIPTION}
+                    </div>
+                  <a className="liveLink" href="unite-pro.net">Enrolld Demo Videos</a>
+                  <div className="learnedFromProject">
+                    < Listing listing={SKILLS} title="Learned From Enrolld" />
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="portfolioContentDisplay" id="portfolioList">
-              < Listing listing={CLASSES} title="Important Classes" color={"#663700"} />
+            <div className={`portfolioContentRight ${portfolioProject}`}>
+              <div className="portfolioProjectVideoAndSelector">
+                <div className="portfolioProjectSelector">
+                  <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
+                  <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
+                  <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
+                </div>
+              </div>
+              <div className="portfolioBelowProjectVideo">
+                {portfolioProject === 'unite-pro' ? (
+                  <div className="technologiesInProject">
+                    < Listing listing={SKILLS} title="Technologies Used In Unite-Pro" />
+                  </div>
+                ) : (
+                  <div className="technologiesInProject">
+                    < Listing listing={SKILLS} title="Technologies Used In Enrolld" />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-          <div className={`portfolioMiddle ${portfolioProject}`}>
-            <div className="portfolioProjectSelector">
-              <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
-              <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
-              <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
-            </div>
-          </div>
-          <div className="portfolioBottom"></div>
         </div>
         {/* END PORTFOLIO SECTION */}
         <div className="spacer" id="thirdSpacer">

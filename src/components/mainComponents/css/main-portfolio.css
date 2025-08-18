@@ -12,6 +12,7 @@
     width: 100%;
     height: 10%;
     background-color: #f7f7f7;
+    border-bottom: 5px solid black;
 }
 
 .portfolioContactBar {
@@ -22,26 +23,115 @@
     align-items: center;
 }
 
-.portfolioMiddle {
+.portfolioContent {
     width: 100%;
-    height: 40%;
+    height: 90%;
+    display: flex;
+}
+
+.portfolioContentLeft {
+    height: 100%;
+    width: 45%;
+    background-color: #00796B;
+}
+
+.projectContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolioContentDescription {
+    max-height: 40%;
+    width: calc(100% - 40px);
+    font-size: 16px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.portfolioContentDescription::-webkit-scrollbar {
+    display: none;
+}
+
+.descriptionTitle {
+    width: 80%;
+    height: 30px;
+    background-color: #00796B;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.liveLink {
+    height: 5%;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.learnedFromProject, .technologiesInProject {
+    height: calc(100% - 80px);
+    width: calc(100% - 80px);
+    background: white; /* Or a subtle tinted background */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
+    border-radius: 8px; /* rounded corners help */
+    padding: 20px;
+    position: relative;
+}
+
+.learnedFromProject {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.portfolioContentRight {
+    height: 100%;
+    width: 55%;
+}
+
+.portfolioProjectVideoAndSelector {
+    height: 65%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 5px solid black;
     border-bottom: 5px solid black;
+    border-left: 5px solid black;
     transition: background-image 0.5s ease-in-out;
 }
 
-.portfolioMiddle.unite-pro {
+.portfolioContentRight.unite-pro {
     background-image: url('/assets/backgrounds/unite-pro.png');
 }
 
-.portfolioMiddle.enrolld {
+.portfolioContentRight.enrolld {
     background-image: url('/assets/backgrounds/enrolld.png');
 }
 
 .portfolioProjectSelector {
-    height: 25%;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -51,7 +141,7 @@
 }
 
 .portfolioProject {
-    height: 100%;
+    height: 50%;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -87,40 +177,11 @@
     text-decoration: underline;
 }
 
-.portfolioBottom {
+.portfolioBelowProjectVideo {
+    height: 35%;
     width: 100%;
-    height: 50%;
     background-color: #00796B;
-    position: relative;
-}
-
-.portfolioContent {
-    height: 80%; /* 10% for top and extra for the project selector bar */
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    z-index: 3;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
-
-.portfolioContentDisplay {
-    height: 60%;
-    width: 35%;
-    position: relative;
-}
-
-#portfolioImageCarousel {
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
-}
-
-#portfolioList {
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
 }

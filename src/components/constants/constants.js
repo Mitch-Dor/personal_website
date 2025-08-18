@@ -15,6 +15,10 @@ serves as a draft sim where users can practice drafting alone, with others onlin
 niches that are completely unfilled anywhere else in the Pokemon Unite community so I wanted to create the webapp for myself and others to use. The Webapp is hosted on Heroku with
 a database on Supabase. The webapp is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
 attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`
+export const UNITE_PRO_DESCRIPTION = `Unite-Pro is a draft-sim and pro stat tracker that is used to help competitive players improve at the game Pokemon Unite. The webapp teaches players 
+by allowing them to draft by themselves, against an AI, or against other players online. The AI is primarily made using A* search and planning with future plans to use deep learning 
+as I collect more data. The stat tracker lets users view and filter old matches to review what is important to them, view and filter individual character stats to find which characters 
+are effective in different scenarios, and perform data analysis on team comps to understand what lets a pokemon thrive or be countered.`;
 
 // Listings
 export const SKILLS = [
@@ -50,4 +54,4 @@ export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
     {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
     {img: '/assets/carousel/education/breloom.gif', desc: 'Filler'}
-]
+];
