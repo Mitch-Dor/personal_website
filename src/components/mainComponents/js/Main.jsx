@@ -157,7 +157,7 @@ function Main() {
                     <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
                     <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
                   </div>
-                  <video autoPlay loop muted playsInLine className="projectVideo">
+                  <video autoPlay loop muted playsInLine className="projectVideo" key={portfolioProject}>
                     <source src="/assets/Unite-Pro-Preview.mp4" type="video/mp4" />
                     <source src="/video.webm" type="video/webm" />
                     Your browser does not support the video tag.
@@ -171,7 +171,36 @@ function Main() {
               </div>
             </div>
           ) : (
-            <div></div>
+            <div className="portfolioContent">
+              <div className="portfolioContentLeft">
+                <div className="learnedFromProject">
+                  < Listing listing={SKILLS} title="Lessons Learned" />
+                </div>
+              </div>
+              <div className="portfolioContentCenter">
+                <div className="portfolioContentDescription">
+                  <a className="descriptionTitle" href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
+                  {UNITE_PRO_DESCRIPTION}
+                </div>
+                <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
+                  <div className="portfolioProjectSelector">
+                    <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
+                    <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
+                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
+                  </div>
+                  <video autoPlay loop muted playsInLine className="projectVideo" key={portfolioProject}>
+                    <source src="/assets/Enrolld-Preview.mp4" type="video/mp4" />
+                    <source src="/video.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <div className="portfolioContentRight">
+                <div className="technologiesInProject">
+                  < Listing listing={SKILLS} title="Technologies Used" />
+                </div>
+              </div>
+            </div>
           )}
         </div>
         {/* END PORTFOLIO SECTION */}
