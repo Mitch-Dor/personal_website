@@ -63,12 +63,11 @@ export const CLASSES = [
     'CSE 342 Fundamentals of Internetworking',
     'CSE 280 & 281 Capstone'
 ]
-export const UNITE_PRO_LEARNED = [
-    'How to set up a website / database for production (Heroku in this case).',
+export const UNITE_PRO_SKILLS = [
+    'Setting Up a Website / Database for Production (Heroku in this Case).',
     'Deploy Scripts',
     'Establishing / Managing Connections for Multiplayer',
-    'Creating My Own AI From Scratch',
-    'Cookies',
+    'Creating An AI From Scratch',
     'Data Analysis',
     'Data Collection'
 ]
@@ -82,7 +81,7 @@ export const UNITE_PRO_TECH = [
     'Heroku',
     'Supabase'
 ]
-export const ENROLLD_LEARNED = [
+export const ENROLLD_SKILLS = [
     'Agile Methodology',
     'Demoing',
     'Feedback Integration From Stakeholders',
@@ -106,10 +105,10 @@ export const DA_ACHIEVEMENTS = [
     'Have Completed 100s of Tasks'
 ]
 export const DA_TASKS = [
-    'TASK: Scrape Information App With The Entertainment and Gaming Tags from the Google Playstore. SOLUTION: Created a scraper using Playwright to interact with the webpages to gather all required data',
-    'TASK: Correct an AI Response on Fluid Physics in LUA',
-    'TASK: Correct an AI Response to Create an Interactive Art Gallery Using Vue.js',
-    'TASK: Analyze Issue Posted on Apache, Review the Pull Request and Test Files, and Determine Whether the Tests are Adequate and Why'
+    'Scrape Information App With The Entertainment and Gaming Tags from the Google Playstore',
+    'Correct an AI Response on Fluid Physics in LUA',
+    'Correct an AI Response to Create an Interactive Art Gallery Using Vue.js',
+    'Analyze Issue Posted on Apache, Review the Pull Request and Test Files, and Determine Whether the Tests are Adequate and Why'
 ]
 export const MONROE_ACHIEVEMENTS = [
     'Reached Out To Schools Surrouding our Pipeline To Provide Lines of Communication, Emergency Procedures, and General Information',

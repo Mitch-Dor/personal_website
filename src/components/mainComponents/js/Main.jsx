@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_DESCRIPTION, UNITE_PRO_LEARNED, UNITE_PRO_TECH, ENROLLD_DESCRIPTION, ENROLLD_LEARNED, ENROLLD_TECH, DATA_ANNOTATION_DESCRIPTION, DA_TASKS, DA_ACHIEVEMENTS, MONROE_DESCRIPTION, MONROE_ACHIEVEMENTS } from '../../constants/constants';
+import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_SKILLS, ENROLLD_SKILLS, DATA_ANNOTATION_DESCRIPTION, DA_TASKS, DA_ACHIEVEMENTS, MONROE_DESCRIPTION, MONROE_ACHIEVEMENTS } from '../../constants/constants';
 
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -145,15 +145,6 @@ function Main() {
           {portfolioProject === 'unite-pro' ? (
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
-                <div className="learnedFromProject">
-                  < Listing listing={UNITE_PRO_LEARNED} title="Lessons Learned" color="#786000" />
-                </div>
-              </div>
-              <div className="portfolioContentCenter">
-                <div className="portfolioContentDescription">
-                  <a className={`descriptionTitle ${portfolioProject}`} href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net</a>
-                  {UNITE_PRO_DESCRIPTION}
-                </div>
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
                   <div className="portfolioProjectSelector">
                     <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
@@ -168,23 +159,31 @@ function Main() {
                 </div>
               </div>
               <div className="portfolioContentRight">
-                <div className="technologiesInProject">
-                  < Listing listing={UNITE_PRO_TECH} title="Technologies Used" color="#786000" />
+                <div className="portfolioContentDescription">
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net</a>
+                  <div className="belowTitle">
+                    <div className="whatIsIt">
+                      <div className="subsectionTitle">What Is It?</div>
+                      <div className="subsectionInformation">Unite-Pro is a public webapp that is a draft-sim and stat tracker for pro matches in the video game Pokemon Unite. It helps users practice for the pro scene.</div>
+                    </div>
+                    <div className="usageData">
+                      <div className="subsectionTitle">Usage Data</div>
+                      <div className="subsectionInformation">Unite-Pro is currently in its beta stage, but is about to be released to the public.</div>
+                    </div>
+                    <div className="howDoesItWork">
+                      <div className="subsectionTitle">How Does It Work?</div>
+                      <div className="subsectionInformation">The AI uses planning and A* search to quickly find the best team comp possible based on traits. The Pokemon Company does not publicly list data so it must be hand collected via their livestreams.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="skillsFromProject">
+                  < Listing listing={UNITE_PRO_SKILLS} title="Significant Skills" color="#786000" />
                 </div>
               </div>
             </div>
           ) : (
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
-                <div className="learnedFromProject">
-                  < Listing listing={ENROLLD_LEARNED} title="Lessons Learned" />
-                </div>
-              </div>
-              <div className="portfolioContentCenter">
-                <div className="portfolioContentDescription">
-                  <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
-                  {ENROLLD_DESCRIPTION}
-                </div>
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
                   <div className="portfolioProjectSelector">
                     <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
@@ -199,8 +198,25 @@ function Main() {
                 </div>
               </div>
               <div className="portfolioContentRight">
-                <div className="technologiesInProject">
-                  < Listing listing={ENROLLD_TECH} title="Technologies Used" />
+                <div className="portfolioContentDescription">
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
+                  <div className="belowTitle">
+                    <div className="whatIsIt">
+                      <div className="subsectionTitle">What Is It?</div>
+                      <div className="subsectionInformation">Enrolld is a webapp for colleges to help students communicate efficiently with advisors and plan their schedules in advance so classes can match student demand.</div>
+                    </div>
+                    <div className="userTesting">
+                      <div className="subsectionTitle">User Testing</div>
+                      <div className="subsectionInformation">The team was able to successfully test the webapp with 100 students after about 500 hours of work between 4 people over two semesters.</div>
+                    </div>
+                    <div className="keyTakeaways">
+                      <div className="subsectionTitle">Why Is It Significant?</div>
+                      <div className="subsectionInformation">Enrolld required me to work in a team of developers, demo weekly, and integrate stakeholder feedback to follow the agile methodology and deliver a great product.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="skillsFromProject">
+                  < Listing listing={ENROLLD_SKILLS} title="Significant Skills" />
                 </div>
               </div>
             </div>
@@ -222,23 +238,29 @@ function Main() {
             <WaveSeparatorBottom color={"#2C2C2C"} />
             <AnimatedBackground section={"workSection"} />
             <div className="DASection">
-              <div className="DALeft">
+              <div className="DATop">
                 <div className="DALogo">
                   <img src="/assets/DA.png"></img>
                 </div>
-                <div className="DAExampleTasks">
-                  < Listing listing={DA_TASKS} title="Example Tasks" color="#00D5BC" />
-                </div>
-              </div>
-              <div className="DARight">
-                <div className="DAAchievements">
-                  < Listing listing={DA_ACHIEVEMENTS} title="Achievements" color="#00D5BC" />
-                </div>
                 <div className="DADescription">
                   <div className="DADescTitle">
-                    DataAnnotation
+                    DataAnnotation And Me
                   </div>
-                  {DATA_ANNOTATION_DESCRIPTION}
+                  <div className="DADescTopics">
+                    <div className="myRole">
+                      <div className="subsectionTitle">My Role</div>
+                      <div className="subsectionInformation">At DataAnnotation I am an AI trainer. This means I take on tasks to correct AI responses to difficult prompts and identify where the AI went wrong.</div>
+                    </div>
+                    <div className="myLearning">
+                      <div className="subsectionTitle">Learned Skills</div>
+                      <div className="subsectionInformation">I now excel at research since this role requires me to be able to quickly find and understand documentation for specific plugins, niche languages, and more.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="DABottom">
+                <div className="DAExampleTasks">
+                  < Listing listing={DA_TASKS} title="Example Tasks" color="#00D5BC" />
                 </div>
               </div>
             </div>
@@ -246,9 +268,18 @@ function Main() {
               <div className="MonroeSectionTop">
                 <div className="MonroeDescription">
                   <div className="MonroeDescTitle">
-                    Monroe Energy
+                    Monroe Energy And Me
                   </div>
-                  {MONROE_DESCRIPTION}
+                  <div className="MonroeDescTopics">
+                    <div className="myTasks">
+                      <div className="subsectionTitle">My Tasks</div>
+                      <div className="subsectionInformation">I would handle tasks like filling out permits, performing inspections of the tanks that store the fuel, and labeling / documenting every valve and instrument on the pipeline.</div>
+                    </div>
+                    <div className="myEffect">
+                      <div className="subsectionTitle">Monroe's Effect</div>
+                      <div className="subsectionInformation">Monroe rarely provided me with tasks so I would need to seek out ways to be useful. I searched for what others needed and found ways to make them and Monroe more efficient.</div>
+                    </div>
+                  </div>
                 </div>
                 <div className="MonroeLogo">
                   <img src="/assets/Monroe.png"></img>

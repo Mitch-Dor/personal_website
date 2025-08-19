@@ -20,6 +20,7 @@
     border-radius: 25px;
     background-color: #4DB6AC;
     color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .listList {
