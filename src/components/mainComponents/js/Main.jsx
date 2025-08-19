@@ -73,7 +73,10 @@ function Main() {
               <img src="./assets/me/Grad.png"></img>
             </div>
             <div className="headerTextPortion">
-              <div className="headerName">Mitchell Dorward</div>
+              <div className="headerName">
+                <div className="name">Mitchell Dorward</div>
+                <div className="title">Computer Science Engineer</div>
+              </div>
               <div className="contactMe">
                 < ContactBar />
               </div>
@@ -143,12 +146,12 @@ function Main() {
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
                 <div className="learnedFromProject">
-                  < Listing listing={SKILLS} title="Lessons Learned" />
+                  < Listing listing={SKILLS} title="Lessons Learned" color="#786000" />
                 </div>
               </div>
               <div className="portfolioContentCenter">
                 <div className="portfolioContentDescription">
-                  <a className="descriptionTitle" href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net</a>
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net</a>
                   {UNITE_PRO_DESCRIPTION}
                 </div>
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
@@ -166,7 +169,7 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="technologiesInProject">
-                  < Listing listing={SKILLS} title="Technologies Used" />
+                  < Listing listing={SKILLS} title="Technologies Used" color="#786000" />
                 </div>
               </div>
             </div>
@@ -179,7 +182,7 @@ function Main() {
               </div>
               <div className="portfolioContentCenter">
                 <div className="portfolioContentDescription">
-                  <a className="descriptionTitle" href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
                   {UNITE_PRO_DESCRIPTION}
                 </div>
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
@@ -217,18 +220,19 @@ function Main() {
           </div>
           <div className="workContent">
             <WaveSeparatorBottom color={"#2C2C2C"} />
+            <AnimatedBackground section={"workSection"} />
             <div className="DASection">
               <div className="DALeft">
                 <div className="DALogo">
                   <img src="/assets/DA.png"></img>
                 </div>
                 <div className="DAExampleTasks">
-                  < Listing listing={SKILLS} title="Example Tasks" />
+                  < Listing listing={SKILLS} title="Example Tasks" color="#00D5BC" />
                 </div>
               </div>
               <div className="DARight">
                 <div className="DAAchievements">
-                  < Listing listing={SKILLS} title="Achievements" />
+                  < Listing listing={SKILLS} title="Achievements" color="#00D5BC" />
                 </div>
                 <div className="DADescription">
                   <div className="DADescTitle">
@@ -252,7 +256,7 @@ function Main() {
               </div>
               <div className="MonroeSectionBottom">
                 <div className="MonroeAchievements">
-                  < Listing listing={SKILLS} title="Achievements" />
+                  < Listing listing={SKILLS} title="Achievements" color="#00D5BC" />
                 </div>
               </div>
             </div>

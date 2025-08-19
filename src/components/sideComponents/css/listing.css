@@ -35,7 +35,7 @@
 
 .listUp {
     position: absolute;
-    top: calc(20% + 10px);
+    top: calc(min(20% + 10px, 80px));
     right: 20px;
     margin: 10px;
     width: 20px;

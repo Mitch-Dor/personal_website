@@ -22,13 +22,15 @@ are effective in different scenarios, and perform data analysis on team comps to
 
 // Listings
 export const SKILLS = [
-    "Frontend Skills: React.js, Vue.js, JavaScript, CSS, HTML, jQuery, ", 
-    "Backend Skills: RESTful APIs, C++, C, SQL, Database Structure, ",
-    "Data Structures: Linked List, Queue, Priority Queue, Stack, Trees, Binary Search Trees (BSTs), ",
-    "AI Techniques: Finite State Machines (FSMs), A* Search, Generative Algorithms, ",
-    "Machine Learning Techniques: ",
-    "Other Languages: Rust, ",
-    "Other Technologies: Excel, CAD, "
+    "Frontend Skills: Node.js, React.js, Vue.js, JavaScript, CSS, HTML, jQuery, Understanding of Internet Protocol Stack, Understanding of Internet (TCP, UDP, etc)", 
+    "Backend Skills: RESTful APIs, C++, C, SQL, Database Structure",
+    "Data Structures: Hash Tables, Linked List, Queue, Priority Queue, Stack, Trees, Binary Search Trees (BSTs), Time Complexity",
+    "Other Coding Skills: Multithreaded Programming, Compiler Design, Operating Systems, Embedded Systems, Proofs",
+    "AI Techniques: Finite State Machines (FSMs), A* Search, Generative Algorithms, NavMesh, Blackboards, Planning, Procedural Content Generation, Grammars, Minimax, Hill Climbing",
+    "Machine Learning Techniques: Backpropogation, Neural Networks, Deep Learning, Regression, Discriminants, Approximation, Kernels",
+    "Other Languages: Python, Java, Rust, Flutter, TypeScript, Assembly",
+    "Cybersecurity Knowledge: NIST, Network Architecture, Google Chronicle, Wireshark, Linux",
+    "Other Technologies: Excel, CAD"
 ]
 export const TA_TAKEAWAYS = [
     `Increased grading efficiency by creating autograders that were easy to maintain.`,
@@ -37,8 +39,17 @@ export const TA_TAKEAWAYS = [
     `Improved student understanding by holding office hours where I would explain class topics and assignments.`
 ]
 export const CLASSES = [
-    'Data Structures & Algorithms',
-
+    'CSE 017 Data Structures & Algorithms',
+    'CSE 216 Software Engineering',
+    'CSE 241 Database Systems & Applications',
+    'CSE 326 Machine Learning',
+    'CSE 340 Design & Analysis of Algorithms',
+    'CSE 348 Game AI',
+    'CSE 202 Computer Organization Architecture',
+    'CSE 262 Progamming Languages (Creating A Languages)',
+    'CSE 303 Operating System Design',
+    'CSE 342 Fundamentals of Internetworking',
+    'CSE 280 & 281 Capstone'
 ]
 
 

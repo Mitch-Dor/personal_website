@@ -84,7 +84,6 @@
 .descriptionTitle {
     width: 80%;
     height: 30px;
-    background-color: #00796B;
     border-radius: 30px;
     padding: 5px;
     font-size: 20px;
@@ -95,6 +94,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+}
+
+.descriptionTitle.unite-pro {
+    background-color: #780071;
+}
+
+.descriptionTitle.enrolld {
+    background-color: #00B39E;
 }
 
 .liveLink {

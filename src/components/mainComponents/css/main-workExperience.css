@@ -31,7 +31,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00796B;
     position: relative;
 }
 
@@ -100,7 +99,7 @@
 
 .DADescTitle {
     height: 30px;
-    background-color: #00796B;
+    background-color: #00B39E;
     border-radius: 20px;
     color: white;
     display: flex;
@@ -141,7 +140,7 @@
 
 .MonroeDescTitle {
     height: 30px;
-    background-color: #00796B;
+    background-color: #00B39E;
     border-radius: 20px;
     color: white;
     display: flex;

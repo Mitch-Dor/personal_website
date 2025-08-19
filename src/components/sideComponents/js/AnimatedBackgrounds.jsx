@@ -37,8 +37,8 @@ export default function AnimatedBackground({ section }) {
           backgroundColor: 0x00796b
         })
       break;
-      case "educationSection":
-        effect = BIRDS({
+      case "workSection":
+        effect = WAVES({
           el: vantaRef.current,
           THREE,
           mouseControls: true,
@@ -48,11 +48,10 @@ export default function AnimatedBackground({ section }) {
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          backgroundColor: 0xd9d9d9,
-          color1: 0x00796b,
-          color2: 0xe790e,
-          separation: 50.00,
-          backgroundAlpha: 0.00
+          color: 0x004D44,
+          waveHeight: 23.00,
+          waveSpeed: 1.25,
+          zoom: 0.84
         })
         break;
       case "unite-proSection":
