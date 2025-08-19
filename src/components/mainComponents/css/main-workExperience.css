@@ -191,3 +191,11 @@
     padding: 20px;
     position: relative;
 }
+
+.MonroeDescription, .DADescription {
+    overflow-y: scroll;
+}
+
+.MonroeDescription::-webkit-scrollbar, .DADescription::-webkit-scrollbar {
+    overflow-y: scroll;
+}

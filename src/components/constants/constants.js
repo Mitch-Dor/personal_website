@@ -19,6 +19,18 @@ export const UNITE_PRO_DESCRIPTION = `Unite-Pro is a draft-sim and pro stat trac
 by allowing them to draft by themselves, against an AI, or against other players online. The AI is primarily made using A* search and planning with future plans to use deep learning 
 as I collect more data. The stat tracker lets users view and filter old matches to review what is important to them, view and filter individual character stats to find which characters 
 are effective in different scenarios, and perform data analysis on team comps to understand what lets a pokemon thrive or be countered.`;
+export const ENROLLD_DESCRIPTION = `Enrolld is a project I worked on for a full year as my Senior Capstone. It is a webapp designed to help faciliate communication between students
+and advisors. The idea is to have students create their expected schedules for future semesters many months, or even years, early. This way that data can be collected and coordinators
+can use it to more accurately create classes and electives that students need and are interested in. I did work on both the frontend and backend, mostly creating new frontend features
+and creating backend functions and routes that the frontend then uses. In this project I learned to coordinate with 3 other students to be efficient and avoid merge conflicts. The group
+also demo'd to stakeholder weekly and would be responsible for tracking their feedback and implementing it.`
+export const DATA_ANNOTATION_DESCRIPTION = `DataAnnotation is a company specializing in creating high-quality, complex training data for AI models. This is my job as an AI Trainer.
+I am often given AI responses to prompts that were not correct, usually in the realm of computer science. My job is to correct these responses which involves researching information
+about specific plugins, obscure languages, etc and quickly becoming familiar enough with them to correct the response. I sometimes may create difficult prompts and correct them
+myself too.`;
+export const MONROE_DESCRIPTION = `Monroe Energy is an energy company, specifically focused on gasoline and jet fuel production. During my time here, I worked at their pipeline, MIPC.
+In my summer worker role most of my tasks were centered on improving the efficiency of future work. I would handle tasks like filling out permits, performing inspections of the tanks 
+that store the fuel, and labeling / documenting every valve and instrument on the pipeline.`;
 
 // Listings
 export const SKILLS = [
@@ -51,6 +63,60 @@ export const CLASSES = [
     'CSE 342 Fundamentals of Internetworking',
     'CSE 280 & 281 Capstone'
 ]
+export const UNITE_PRO_LEARNED = [
+    'How to set up a website / database for production (Heroku in this case).',
+    'Deploy Scripts',
+    'Establishing / Managing Connections for Multiplayer',
+    'Creating My Own AI From Scratch',
+    'Cookies',
+    'Data Analysis',
+    'Data Collection'
+]
+export const UNITE_PRO_TECH = [
+    'React.js',
+    'Chart.js',
+    'RESTful APIs',
+    'AI Techniques',
+    'POSTGREsql Database',
+    'Google OAuth',
+    'Heroku',
+    'Supabase'
+]
+export const ENROLLD_LEARNED = [
+    'Agile Methodology',
+    'Demoing',
+    'Feedback Integration From Stakeholders',
+    'Group Coding',
+    'Unit Testing',
+    'Pull Requests',
+    'Taking Meeting Notes / Meeting Etiquette',
+    'User Personas'
+]
+export const ENROLLD_TECH = [
+    'React.js',
+    'React-Flow',
+    'POSTGREsql Database',
+    'Postman',
+    'Heroku',
+    'Middleware'
+]
+export const DA_ACHIEVEMENTS = [
+    'Have Learned More Niche Languages like Rust to Tackle Unpopular Tasks',
+    'Have Learned How To Research Efficiently To Maximize Efficiency',
+    'Have Completed 100s of Tasks'
+]
+export const DA_TASKS = [
+    'TASK: Scrape Information App With The Entertainment and Gaming Tags from the Google Playstore. SOLUTION: Created a scraper using Playwright to interact with the webpages to gather all required data',
+    'TASK: Correct an AI Response on Fluid Physics in LUA',
+    'TASK: Correct an AI Response to Create an Interactive Art Gallery Using Vue.js',
+    'TASK: Analyze Issue Posted on Apache, Review the Pull Request and Test Files, and Determine Whether the Tests are Adequate and Why'
+]
+export const MONROE_ACHIEVEMENTS = [
+    'Reached Out To Schools Surrouding our Pipeline To Provide Lines of Communication, Emergency Procedures, and General Information',
+    'Filled Out Permits',
+    'During An Emergency Where A Tank Had A Cracked Base, I Assisted In Taking Meeting Minutes and Going Out To The Surrounding Community To Ease Concerns and Open Lines of Communication',
+    'Read Recent Legislation To Update Handbooks and Processes in order to Comply'
+]
 
 
 // Image Carousels
@@ -64,5 +130,5 @@ export const INTRO_CAROUSEL = [
 export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
     {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
-    {img: '/assets/carousel/education/breloom.gif', desc: 'Filler'}
+    {img: '/assets/carousel/education/deansList.png', desc: "I made the Dean's List student my last 5 semesters at Lehigh (out of 7 total)."}
 ];

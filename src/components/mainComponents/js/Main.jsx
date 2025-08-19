@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_DESCRIPTION } from '../../constants/constants';
+import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_DESCRIPTION, UNITE_PRO_LEARNED, UNITE_PRO_TECH, ENROLLD_DESCRIPTION, ENROLLD_LEARNED, ENROLLD_TECH, DATA_ANNOTATION_DESCRIPTION, DA_TASKS, DA_ACHIEVEMENTS, MONROE_DESCRIPTION, MONROE_ACHIEVEMENTS } from '../../constants/constants';
 
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -146,7 +146,7 @@ function Main() {
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
                 <div className="learnedFromProject">
-                  < Listing listing={SKILLS} title="Lessons Learned" color="#786000" />
+                  < Listing listing={UNITE_PRO_LEARNED} title="Lessons Learned" color="#786000" />
                 </div>
               </div>
               <div className="portfolioContentCenter">
@@ -169,7 +169,7 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="technologiesInProject">
-                  < Listing listing={SKILLS} title="Technologies Used" color="#786000" />
+                  < Listing listing={UNITE_PRO_TECH} title="Technologies Used" color="#786000" />
                 </div>
               </div>
             </div>
@@ -177,13 +177,13 @@ function Main() {
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
                 <div className="learnedFromProject">
-                  < Listing listing={SKILLS} title="Lessons Learned" />
+                  < Listing listing={ENROLLD_LEARNED} title="Lessons Learned" />
                 </div>
               </div>
               <div className="portfolioContentCenter">
                 <div className="portfolioContentDescription">
                   <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
-                  {UNITE_PRO_DESCRIPTION}
+                  {ENROLLD_DESCRIPTION}
                 </div>
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
                   <div className="portfolioProjectSelector">
@@ -200,7 +200,7 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="technologiesInProject">
-                  < Listing listing={SKILLS} title="Technologies Used" />
+                  < Listing listing={ENROLLD_TECH} title="Technologies Used" />
                 </div>
               </div>
             </div>
@@ -227,18 +227,18 @@ function Main() {
                   <img src="/assets/DA.png"></img>
                 </div>
                 <div className="DAExampleTasks">
-                  < Listing listing={SKILLS} title="Example Tasks" color="#00D5BC" />
+                  < Listing listing={DA_TASKS} title="Example Tasks" color="#00D5BC" />
                 </div>
               </div>
               <div className="DARight">
                 <div className="DAAchievements">
-                  < Listing listing={SKILLS} title="Achievements" color="#00D5BC" />
+                  < Listing listing={DA_ACHIEVEMENTS} title="Achievements" color="#00D5BC" />
                 </div>
                 <div className="DADescription">
                   <div className="DADescTitle">
                     DataAnnotation
                   </div>
-                  Lorem Ipsom
+                  {DATA_ANNOTATION_DESCRIPTION}
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ function Main() {
                   <div className="MonroeDescTitle">
                     Monroe Energy
                   </div>
-                  Lorem Ipsom
+                  {MONROE_DESCRIPTION}
                 </div>
                 <div className="MonroeLogo">
                   <img src="/assets/Monroe.png"></img>
@@ -256,7 +256,7 @@ function Main() {
               </div>
               <div className="MonroeSectionBottom">
                 <div className="MonroeAchievements">
-                  < Listing listing={SKILLS} title="Achievements" color="#00D5BC" />
+                  < Listing listing={MONROE_ACHIEVEMENTS} title="Achievements" color="#00D5BC" />
                 </div>
               </div>
             </div>
