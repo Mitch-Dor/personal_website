@@ -216,13 +216,13 @@
 
 .subsectionInformation {
     width: 100%;
-    height: 70%;
+    height: 75%;
     font-size: 0.8em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     overflow-y: scroll;
 }
 
