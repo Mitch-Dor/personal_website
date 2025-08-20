@@ -87,7 +87,7 @@
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .DAExampleTasks {
-    width: 100%;
+    width: calc(100% - 40px);
     height: calc(100% - 40px);
     background: white; /* Or a subtle tinted background */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
@@ -169,7 +169,7 @@
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
@@ -235,4 +235,55 @@
     border-radius: 8px; /* rounded corners help */
     padding: 20px;
     position: relative;
+}
+
+@media (max-width: 720px) {
+    .DATop {
+        flex-direction: column;
+        height: 65%;
+        width: 100%;
+    }
+    .DALogo {
+        width: 90%;
+        height: 20%;
+    }
+    .DADescription {
+        width: calc(90% - 20px);
+        height: calc(70% - 20px);
+        padding: 10px;
+        font-size: 12px;
+    }
+    .DABottom {
+        height: 30%;
+    }
+    .DAExampleTasks {
+        padding: 10px;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+    }
+    .MonroeSectionTop {
+        flex-direction: column;
+        width: 100%;
+        height: 70%;
+    }
+    .MonroeDescription {
+        height: calc(70% - 20px);
+        width: calc(95% - 20px);
+        padding: 10px;
+        font-size: 12px;
+    }
+    .MonroeLogo {
+        height: calc(25% - 20px);
+        width: calc(95% - 20px);
+        padding: 10px;
+    }
+    .MonroeSectionBottom {
+        width: 100%;
+        height: 25%;
+    }
+    .MonroeAchievements {
+        padding: 10px;
+        height: calc(100% - 20px);
+        width: calc(95% - 20px);
+    }
 }

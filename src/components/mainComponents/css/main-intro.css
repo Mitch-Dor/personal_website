@@ -55,7 +55,7 @@
 
 .name {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     color: white;
     text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
     font-weight: bold;
@@ -63,7 +63,7 @@
 
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     color: white;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     font-weight: bold;
@@ -83,13 +83,14 @@
     width: 33%;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 1.25em;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     font-weight: bold;
+    text-align: center;
 }
 
 .headerItemClickable:hover {
@@ -135,4 +136,30 @@
 .contactMe {
     width: 100%;
     height: 25%;
+    font-size: 0.85em;
+}
+
+@media (max-width: 720px) {
+  /* CSS here only applies when viewport width <= 720px (phones) */
+  .links {
+    font-size: 8px;
+  }
+  .headerTextPortion {
+    font-size: 12px;
+  }
+  .introContent {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5%;
+  }
+  .skillsArea {
+    height: calc(45% - 40px);
+    width: calc(90% - 40px);
+    margin: 0;
+  }
+  .introCarousel {
+    height: calc(45% - 40px);
+    width: calc(90% - 40px);
+    margin: 0;
+  }
 }

@@ -77,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: white;
@@ -127,7 +127,7 @@
 .portfolioContentDescription {
     height: 35%;
     width: calc(100% - 40px);
-    font-size: 16px;
+    font-size: 1em;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
@@ -151,7 +151,7 @@
     height: 30px;
     border-radius: 30px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
     color: #f7f7f7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -203,7 +203,7 @@
 .subsectionTitle {
     width: 100%;
     height: 20%;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
@@ -217,16 +217,21 @@
 .subsectionInformation {
     width: 100%;
     height: 70%;
-    font-size: 16px;
+    font-size: 0.8em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    overflow-y: scroll;
+}
+
+.subsectionInformation::-webkit-scrollbar {
+    display: none;
 }
 
 .skillsFromProject {
-    height: 50%;
+    height: 40%;
     width: calc(100% - 80px);
     background: #f7f7f7; /* Or a subtle tinted background */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
@@ -234,3 +239,33 @@
     padding: 20px;
     position: relative;
 }
+
+@media (max-width: 720px) {
+  .portfolioContent {
+    flex-direction: column;
+  }
+
+  .portfolioContentLeft {
+    width: 100%;
+    height: 35%;
+  }
+
+  .portfolioContentRight {
+    width: 100%;
+    height: 60%;
+  }
+
+  .portfolioContentDescription {
+    height: 50%;
+    font-size: 12px;
+  }
+
+  .skillsFromProject {
+    height: 40%;
+  }
+
+  .portfolioProjectVideoAndSelector {
+    font-size: 8px;
+  }
+}
+

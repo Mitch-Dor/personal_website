@@ -7,11 +7,17 @@
 }
 
 .contactItem {
-    font-size: 20px;
+    font-size: 1.25em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .educationTop .contactItem, .portfolioTop .contactItem, .workTop .contactItem {
@@ -24,4 +30,17 @@
     height: 40px;
     width: auto;
     cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .contactMe .contactBar {
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .contactBar {
+        font-size: 10px;
+    }
+    .contactItem img {
+        height: 25px;
+    }
 }

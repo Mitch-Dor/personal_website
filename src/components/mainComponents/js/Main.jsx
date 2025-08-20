@@ -18,7 +18,7 @@ function Main() {
   const [scrollPoint, setScrollPoint] = useState(0);
   const [portfolioProject, setPortfolioProject] = useState("unite-pro");
   const [workExperience, setWorkExperience] = useState("dataAnnotation");
-  const viewportHeight = window.innerHeight;
+  const viewportHeight = window.visualViewport.height;
   const baseSectionHeight = viewportHeight;
   const spacerDist = 100;
   const sectionHeight = baseSectionHeight;
@@ -121,7 +121,7 @@ function Main() {
           </div>
           <div className="educationBottom">
             <div id="TAList" className="educationList">
-              < Listing listing={TA_TAKEAWAYS} title="Accomplishments as a CSE348 (GameAI) TA" color={"#663700"} />
+              < Listing listing={TA_TAKEAWAYS} title="TA Accomplishments (GameAI)" color={"#663700"} />
             </div>
             <div className="educationCarousel">
               <ImageCarousel images={EDUCATION_CAROUSEL} />
@@ -151,7 +151,7 @@ function Main() {
                     <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
                     <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
                   </div>
-                  <video autoPlay loop muted playsInLine className="projectVideo" key={portfolioProject}>
+                  <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
                     <source src="/assets/Unite-Pro-Preview.mp4" type="video/mp4" />
                     <source src="/video.webm" type="video/webm" />
                     Your browser does not support the video tag.
@@ -190,7 +190,7 @@ function Main() {
                     <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
                     <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
                   </div>
-                  <video autoPlay loop muted playsInLine className="projectVideo" key={portfolioProject}>
+                  <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
                     <source src="/assets/Enrolld-Preview.mp4" type="video/mp4" />
                     <source src="/video.webm" type="video/webm" />
                     Your browser does not support the video tag.

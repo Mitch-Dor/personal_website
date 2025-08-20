@@ -41,7 +41,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "analyze": "vite-bundle-analyzer",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "vite"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {

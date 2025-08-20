@@ -16,15 +16,17 @@
     justify-content: center;
     align-items: center;
     font-family: verdana;
-    font-size: 20px;
+    font-size: 1.25em;
     border-radius: 25px;
     background-color: #4DB6AC;
     color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
 }
 
 .listList {
     min-height: calc(80% - 20px);
+    max-height: calc(100% - 70px);
     width: 100%;
     overflow-y: scroll;
     display: flex;
@@ -32,28 +34,31 @@
     margin-top: 20px;
     padding: 5px 5px 5px 0px;
     gap: 10px;
+    /* Optional: smooth scrolling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 transparent; /* Firefox */
 }
 
-.listUp {
-    position: absolute;
-    top: calc(min(20% + 10px, 80px));
-    right: 20px;
-    margin: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.listDown {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    margin: 10px;
-    width: 20px;
-    height: 20px;
-}
-
+/* Webkit browsers */
 .listList::-webkit-scrollbar {
-    display: none; 
+    width: 12px;
+}
+
+.listList::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px; /* rounded track ends */
+}
+
+.listList::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the thumb */
+    border-radius: 50px;    /* fully rounded circle ends */
+    border: 3px solid transparent; /* optional padding around thumb */
+    background-clip: content-box;
+}
+
+/* Hover effect */
+.listList::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 .listItem {
@@ -70,7 +75,7 @@
 
 .listItemTab {
     flex-shrink: 0;
-    font-size: 3em; /* relative to parent height */
+    font-size: 3em;
     height: 100%;
     display: flex;
     align-items: center;
@@ -83,6 +88,15 @@
     flex: 1;
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 720px) {
+    .listContainer {
+        font-size: 12px;
+    }
+    .listItemText {
+        font-size: 1.25em;
+    }
 }
