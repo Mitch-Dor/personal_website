@@ -31,7 +31,7 @@
     height: 30%;
     width: 100%;
     position: relative;
-    background: url("assets/backgrounds/Lehigh.jpg");
+    background: url("/assets/backgrounds/Lehigh.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #FFFFFF;

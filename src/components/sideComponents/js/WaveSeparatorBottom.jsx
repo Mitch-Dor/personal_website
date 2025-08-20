@@ -6,7 +6,7 @@ export default function WaveSeparatorBottom({ color, color2 }) {
                 preserveAspectRatio="none"
                 style={{
                     position: 'absolute',
-                    top: 0,
+                    top: -1,
                     left: 0,
                     width: '100%',
                     height: '50px'
@@ -26,7 +26,7 @@ export default function WaveSeparatorBottom({ color, color2 }) {
       preserveAspectRatio="none"
       style={{
         position: 'absolute',
-        top: 0,
+        top: -1,
         left: 0,
         width: '100%',
         height: '100px'

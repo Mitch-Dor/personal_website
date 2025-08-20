@@ -70,7 +70,7 @@ function Main() {
           <div className="headerBar">
             <AnimatedBackground section={"headerBar"} />
             <div className="headerPhoto bobbing2">
-              <img src="./assets/me/Grad.png"></img>
+              <img style={{transform: "scaleX(-1)"}} src="./assets/MeHeadshot.png"></img>
             </div>
             <div className="headerTextPortion">
               <div className="headerName">
