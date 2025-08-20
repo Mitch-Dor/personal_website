@@ -8,6 +8,7 @@ import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
 import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
 import Listing from '../../sideComponents/js/Listing';
 import ContactBar from '../../sideComponents/js/ContactBar';
+import { FaMousePointer } from "react-icons/fa";
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
@@ -160,7 +161,12 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="portfolioContentDescription">
-                  <a className={`descriptionTitle ${portfolioProject}`} href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net</a>
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://unite-pro.net" target="_blank" rel="noopener noreferrer">Unite-Pro.net
+                  <div className="clickMeIcon">
+                    <FaMousePointer className="MouseIcon" />
+                    <div className="clickMeText">Click Me For Site!</div>
+                  </div>
+                  </a>
                   <div className="belowTitle">
                     <div className="whatIsIt">
                       <div className="subsectionTitle">What Is It?</div>
@@ -199,7 +205,12 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="portfolioContentDescription">
-                  <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld</a>
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://drive.google.com/drive/folders/1OaZXhio0DBu3uB7mVpM920AKcnhaKEOt?usp=sharing" target="_blank" rel="noopener noreferrer">Enrolld
+                  <div className="clickMeIcon">
+                    <FaMousePointer className="MouseIcon" />
+                    <div className="clickMeText">Click Me For Demos!</div>
+                  </div>
+                  </a>
                   <div className="belowTitle">
                     <div className="whatIsIt">
                       <div className="subsectionTitle">What Is It?</div>

@@ -120,14 +120,14 @@ export const MONROE_ACHIEVEMENTS = [
 
 // Image Carousels
 export const INTRO_CAROUSEL = [
-    {img: '/assets/carousel/intro/Lehigh.jpg', desc: 'Graduated from Lehigh in 2025 with a Bachelors in Computer Science from the Rossin College of Engineering.'},
+    {img: '/assets/carousel/intro/Lehigh.jpg', desc: 'Lehigh Graduate 2025 - Bachelors in Computer Science from Rossin College of Engineering.'},
     {img: '/assets/carousel/intro/Monroe.jpg', desc: 'Summer internship at Monroe Energy / MIPC during Summer 2024'},
     {img: '/assets/carousel/intro/DA.jpg', desc: 'Started working for Data Annotation in Winter of 2025.'},
-    {img: '/assets/carousel/intro/unite-pro.png', desc: 'Passion project that acts as a draft sim and also performs data collection & analysis for pro matches.'},
-    {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project that I worked on for 1 year. Webapp to help students and advisors communicate / make schedules.'}
+    {img: '/assets/carousel/intro/unite-pro.png', desc: 'Solo dev on draft-sim and pro-stat analysis webapp for Pokemon Unite.'},
+    {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project. Webapp to help students and advisors communicate / make schedules.'}
 ]
 export const EDUCATION_CAROUSEL = [
-    {img: '/assets/carousel/education/music.jpg', desc: 'I played the trombone in all Lehigh ensembles that I could: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble.'},
+    {img: '/assets/carousel/education/music.jpg', desc: "Played trombone for Lehigh's: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble."},
     {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
-    {img: '/assets/carousel/education/deansList.png', desc: "I made the Dean's List student my last 5 semesters at Lehigh (out of 7 total)."}
+    {img: '/assets/carousel/education/deansList.png', desc: "Made the Dean's List my last 5 semesters at Lehigh (out of 7 total)."}
 ];
