@@ -9,6 +9,7 @@ import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
 import Listing from '../../sideComponents/js/Listing';
 import ContactBar from '../../sideComponents/js/ContactBar';
 import { FaMousePointer } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 import '../css/main-core.css';
 import '../css/main-education.css';
 import '../css/main-intro.css';
@@ -70,7 +71,15 @@ function Main() {
         <div id="intro" className="section">
           <div className="headerBar">
             <AnimatedBackground section={"headerBar"} />
-            <div className="headerPhoto bobbing2">
+            <a 
+              href="/assets/Mitchell_Dorward_Resume.pdf" 
+              download 
+              className="downloadResume"
+            >
+              < FiDownload className="downloadIcon" />
+              Resume
+            </a>
+            <div className="headerPhoto">
               <img style={{transform: "scaleX(-1)"}} src="./assets/MeHeadshot.png"></img>
             </div>
             <div className="headerTextPortion">

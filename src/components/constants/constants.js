@@ -10,16 +10,16 @@ by creating autograders for the different assignments. These autograders were al
 and fielded questions from students taking the class.`;
 export const EXTRACURRICULARS_TEXT = `I participated in many different music ensembles for the entirety of my stay at Lehigh: Brass Ensemble, Wind Ensemble,
 Marching 97, & Jazz Orchestra.`;
-export const UNITE_PRO_TEXT = `This is my project that I have taken the furthest. It is a live website that you can find at unite-pro.net! The webapp that has two main draws; 1: it
-serves as a draft sim where users can practice drafting alone, with others online, or versus an AI. 2: I use this webapp to store and do data anlysis on pro matches. These are two
-niches that are completely unfilled anywhere else in the Pokemon Unite community so I wanted to create the webapp for myself and others to use. The Webapp is hosted on Heroku with
-a database on Supabase. The webapp is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
+export const UNITE_PRO_TEXT = `This is my project that I have taken the furthest. It is a live website that you can find at unite-pro.net! The web app that has two main draws; 1: it
+serves as a draft sim where users can practice drafting alone, with others online, or versus an AI. 2: I use this web app to store and do data anlysis on pro matches. These are two
+niches that are completely unfilled anywhere else in the Pokemon Unite community so I wanted to create the web app for myself and others to use. The Web app is hosted on Heroku with
+a database on Supabase. The web app is completely stateless and employs AI techniques like planning and A* search. For the future: I have broken every Pokemon down into their core 
 attributes and once I have gathered enough data, I plan to train a better AI using deep learning, I am just limited by data right now.`
-export const UNITE_PRO_DESCRIPTION = `Unite-Pro is a draft-sim and pro stat tracker that is used to help competitive players improve at the game Pokemon Unite. The webapp teaches players 
+export const UNITE_PRO_DESCRIPTION = `Unite-Pro is a draft-sim and pro stat tracker that is used to help competitive players improve at the game Pokemon Unite. The web app teaches players 
 by allowing them to draft by themselves, against an AI, or against other players online. The AI is primarily made using A* search and planning with future plans to use deep learning 
 as I collect more data. The stat tracker lets users view and filter old matches to review what is important to them, view and filter individual character stats to find which characters 
 are effective in different scenarios, and perform data analysis on team comps to understand what lets a pokemon thrive or be countered.`;
-export const ENROLLD_DESCRIPTION = `Enrolld is a project I worked on for a full year as my Senior Capstone. It is a webapp designed to help faciliate communication between students
+export const ENROLLD_DESCRIPTION = `Enrolld is a project I worked on for a full year as my Senior Capstone. It is a web app designed to help faciliate communication between students
 and advisors. The idea is to have students create their expected schedules for future semesters many months, or even years, early. This way that data can be collected and coordinators
 can use it to more accurately create classes and electives that students need and are interested in. I did work on both the frontend and backend, mostly creating new frontend features
 and creating backend functions and routes that the frontend then uses. In this project I learned to coordinate with 3 other students to be efficient and avoid merge conflicts. The group
@@ -46,8 +46,8 @@ export const SKILLS = [
 ]
 export const TA_TAKEAWAYS = [
     `Increased grading efficiency by creating autograders that were easy to maintain.`,
-    `Made tests more dynamic by mathematically determining if a solution was correct rather than using arbitrary test cases.`,
-    `Increased student enjoyment by making autograders provide specific feedback on why tests failed.`,
+    `Made the autograder more dynamic by making test cases mathematically determine if a solution was correct rather than using arbitrary test cases.`,
+    `Increased student enjoyment by making autograders provide specific feedback on what was failing.`,
     `Improved student understanding by holding office hours where I would explain class topics and assignments.`
 ]
 export const CLASSES = [
@@ -123,8 +123,8 @@ export const INTRO_CAROUSEL = [
     {img: '/assets/carousel/intro/Lehigh.jpg', desc: 'Lehigh Graduate 2025 - Bachelors in Computer Science from Rossin College of Engineering.'},
     {img: '/assets/carousel/intro/Monroe.jpg', desc: 'Summer internship at Monroe Energy / MIPC during Summer 2024'},
     {img: '/assets/carousel/intro/DA.jpg', desc: 'Started working for Data Annotation in Winter of 2025.'},
-    {img: '/assets/carousel/intro/unite-pro.png', desc: 'Solo dev on draft-sim and pro-stat analysis webapp for Pokemon Unite.'},
-    {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project. Webapp to help students and advisors communicate / make schedules.'}
+    {img: '/assets/carousel/intro/unite-pro.png', desc: 'Solo dev on draft-sim and pro-stat analysis web app for Pokemon Unite.'},
+    {img: '/assets/carousel/intro/capstone.png', desc: 'Capstone project. Web app to help students and advisors communicate / make schedules.'}
 ]
 export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/music.jpg', desc: "Played trombone for Lehigh's: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble."},
