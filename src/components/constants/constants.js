@@ -99,6 +99,11 @@ export const ENROLLD_TECH = [
     'Heroku',
     'Middleware'
 ]
+export const UTA_SKILLS = [
+    'Working under a time constraint',
+    'Fast Development',
+    'Prioritization'
+]
 export const DA_ACHIEVEMENTS = [
     'Have Learned More Niche Languages like Rust to Tackle Unpopular Tasks',
     'Have Learned How To Research Efficiently To Maximize Efficiency',

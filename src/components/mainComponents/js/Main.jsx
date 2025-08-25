@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_SKILLS, ENROLLD_SKILLS, DATA_ANNOTATION_DESCRIPTION, DA_TASKS, DA_ACHIEVEMENTS, MONROE_DESCRIPTION, MONROE_ACHIEVEMENTS } from '../../constants/constants';
+import { SKILLS, INTRO_CAROUSEL, TA_TAKEAWAYS, CLASSES, EDUCATION_CAROUSEL, UNITE_PRO_SKILLS, ENROLLD_SKILLS, DATA_ANNOTATION_DESCRIPTION, DA_TASKS, DA_ACHIEVEMENTS, MONROE_DESCRIPTION, MONROE_ACHIEVEMENTS, UTA_SKILLS } from '../../constants/constants';
 
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
@@ -159,7 +159,8 @@ function Main() {
                   <div className="portfolioProjectSelector">
                     <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
                     <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
-                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
+                    <div className={`portfolioProject ${portfolioProject === 'uta' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('uta')}}>UTA</div>
+                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : portfolioProject === 'enrolld' ? 'middle' : 'right'}`}></div>
                   </div>
                   <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
                     <source src="/assets/Unite-Pro-Preview.mp4" type="video/mp4" />
@@ -196,14 +197,15 @@ function Main() {
                 </div>
               </div>
             </div>
-          ) : (
+          ) : portfolioProject === 'enrolld' ? (
             <div className="portfolioContent">
               <div className="portfolioContentLeft">
                 <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
                   <div className="portfolioProjectSelector">
                     <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
                     <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
-                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : 'right'}`}></div>
+                    <div className={`portfolioProject ${portfolioProject === 'uta' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('uta')}}>UTA</div>
+                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : portfolioProject === 'enrolld' ? 'middle' : 'right'}`}></div>
                   </div>
                   <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
                     <source src="/assets/Enrolld-Preview.mp4" type="video/mp4" />
@@ -237,6 +239,51 @@ function Main() {
                 </div>
                 <div className="skillsFromProject">
                   < Listing listing={ENROLLD_SKILLS} title="Significant Skills" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="portfolioContent">
+              <div className="portfolioContentLeft">
+                <div className={`portfolioProjectVideoAndSelector ${portfolioProject}`}>
+                  <div className="portfolioProjectSelector">
+                    <div className={`portfolioProject ${portfolioProject === 'unite-pro' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('unite-pro')}}>Unite-Pro</div>
+                    <div className={`portfolioProject ${portfolioProject === 'enrolld' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('enrolld')}}>Enrolld</div>
+                    <div className={`portfolioProject ${portfolioProject === 'uta' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('uta')}}>UTA</div>
+                    <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : portfolioProject === 'enrolld' ? 'middle' : 'right'}`}></div>
+                  </div>
+                  <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
+                    <source src="/assets/UTA-Preview.mp4" type="video/mp4" />
+                    <source src="/video.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <div className="portfolioContentRight">
+                <div className="portfolioContentDescription">
+                  <a className={`descriptionTitle ${portfolioProject}`} href="https://uta-prediction-maker-653dc6d3ecb2.herokuapp.com/" target="_blank" rel="noopener noreferrer">UTA
+                  <div className="clickMeIcon">
+                    <FaMousePointer className="MouseIcon" />
+                    <div className="clickMeText">Click Me For Site!</div>
+                  </div>
+                  </a>
+                  <div className="belowTitle">
+                    <div className="whatIsIt">
+                      <div className="subsectionTitle">What Is It?</div>
+                      <div className="subsectionInformation">The UTA Pickems app is a web app to increase community engagement in my Discord server, UTA. A 200+ member Discord server managed solely by myself where I run Pokemon Draft Leagues.</div>
+                    </div>
+                    <div className="userTesting">
+                      <div className="subsectionTitle">Speedy Developement</div>
+                      <div className="subsectionInformation">The entire web app was built from scratch in under 48 hours. Users requested pickems just over 2 days before the season started, and doing them in Discord is not engaging, so I quickly built the web app.</div>
+                    </div>
+                    <div className="keyTakeaways">
+                      <div className="subsectionTitle">Why Is It Significant?</div>
+                      <div className="subsectionInformation">During my high school and early college years UTA exceeded 300 members, but I dropped it in favor of committing myself more to college. Now, I need to increase community engagement to revive it.</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="skillsFromProject">
+                  < Listing listing={UTA_SKILLS} title="Significant Skills" color="#4F5178" />
                 </div>
               </div>
             </div>
