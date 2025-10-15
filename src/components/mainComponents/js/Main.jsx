@@ -261,11 +261,7 @@ function Main() {
               </div>
               <div className="portfolioContentRight">
                 <div className="portfolioContentDescription">
-                  <a className={`descriptionTitle ${portfolioProject}`} href="https://uta-prediction-maker-653dc6d3ecb2.herokuapp.com/" target="_blank" rel="noopener noreferrer">UTA
-                  <div className="clickMeIcon">
-                    <FaMousePointer className="MouseIcon" />
-                    <div className="clickMeText">Click Me For Site!</div>
-                  </div>
+                  <a className={`descriptionTitle ${portfolioProject}`}>UTA
                   </a>
                   <div className="belowTitle">
                     <div className="whatIsIt">
