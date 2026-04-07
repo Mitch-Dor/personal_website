@@ -1,0 +1,32 @@
+.textBlock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.textBlock-Title {
+    width: 100%;
+    height: 15%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #4DB6AC;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.textBlock-Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 3px;
+    border-radius: 15px;
+}

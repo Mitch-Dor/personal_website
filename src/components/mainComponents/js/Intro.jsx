@@ -4,7 +4,8 @@ import Listing from '../../sideComponents/js/Listing';
 import ContactBar from '../../sideComponents/js/ContactBar';
 import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
 import ImageCarousel from '../../sideComponents/js/ImageCarousel';
-import { SKILLS, INTRO_CAROUSEL } from '../../constants/constants';
+import TextBlock from '../../sideComponents/js/TextBlock';
+import { SKILLS, INTRO_CAROUSEL, INTRO_TEXT } from '../../constants/constants';
 
 import { FiDownload } from "react-icons/fi";
 
@@ -45,7 +46,7 @@ function Intro({endSectionOne, endSectionTwo, endSectionThree, spacerDist, handl
             <div className="introContent">
             <WaveSeparatorBottom color={"#2C2C2C"} />
             <div className="skillsArea">
-                < Listing listing={SKILLS} title="Skills" />
+                < TextBlock title={"About Me"} body={INTRO_TEXT} />
             </div>
             <div className="introCarousel">
                 <ImageCarousel images={INTRO_CAROUSEL} />

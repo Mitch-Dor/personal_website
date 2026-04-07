@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
@@ -56,26 +55,17 @@ function Main() {
   return (
     <>
       <div id="mainContainer">
-        {/* START INTRO SECTION */}
         < Intro endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} spacerDist={spacerDist} handleScroll={handleScroll} />
-        {/* END INTRO SECTION */}
-        <div className="spacer" id="firstSpacer">
-        </div>
-        {/* START EDUCATION SECTION */}
+        <div className="spacer" id="firstSpacer"></div>
         < Education />
-        {/* END EDUCATION SECTION */}
         <div className="spacer" id="secondSpacer">
           <WaveSeparatorTop color={"#2C2C2C"} />
         </div>
-        {/* START PORTFOLIO SECTION */}
         < Portfolio />
-        {/* END PORTFOLIO SECTION */}
         <div className="spacer" id="thirdSpacer">
           <WaveSeparatorTop color={"#2C2C2C"} />
         </div>
-        {/* BEGIN WORK EXPERIENCE SECTION */}
         < Work />
-        {/* END WORK EXPERIENCE SECTION */}
       </div>
     </>
   );
