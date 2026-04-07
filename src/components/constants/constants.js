@@ -1,8 +1,7 @@
 // Text Blurbs
-export const INTRO_TEXT = `I'm Mitchell Dorward. A recent graduate from Lehigh University who grew up in Pottstown, PA and recently moved to Knoxville, TN. I have a passion for
-finding creative solutions to complex problems. I love to create products that real people can use to better engage with the things they love or need. Some of my best examples of this 
-are in my personal projects. I specialize in full-stack development and am intimately familiar with web technologies like Node.js, React.js, Vue.js, etc. as well as backend languages like
-C++, C, SQL, JavaScript, etc.`
+export const INTRO_TEXT = `I'm Mitchell Dorward, a professionally trained computer scientist who graduated from Lehigh's Rossin College of Engineering with a bachelors in computer science.
+I am a highly ethical, intelligent person who takes care to make the best products and decisions possible. I specialize in software engineering environments and can take
+vague specifications and turn them into fully thought out, creative products. I like to be challenged and I find enjoyment in creating products that I know people use.`
 export const EDUCATION_TEXT = `I am a 2025 graduate from Lehigh University. I graduated with a 3.71 GPA with a major in Computer Science in the Rossin College of Engineering. I also
 graduated with minors in Spanish & Music.`;
 export const BEYOND_CLASSES_TEXT = `I was a grader / teacher's assistant for Professor Lee-Urban for CSE 348: Game AI. In this role I increased grading efficiency
