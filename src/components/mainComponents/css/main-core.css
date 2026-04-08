@@ -150,7 +150,7 @@ body::-webkit-scrollbar {
 }
 
 .highlight-work {
-    color: #883dcf; 
+    color: #b47ce9; 
     font-weight: 600;
 }
 
@@ -159,7 +159,73 @@ body::-webkit-scrollbar {
     font-weight: 600;
 }
 
+.highlight-education-class {
+    color: black;
+    font-weight: 600;
+}
+
 .highlight-portfolio {
     color: #B85C7A;
     font-weight: 600;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 300px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+}
+
+.modal-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.modal-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modal-value {
+    font-size: 1rem;
 }

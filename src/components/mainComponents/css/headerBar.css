@@ -73,29 +73,29 @@
     align-items: center;
 }
 
-.headerBar-Item.resumeButton {
+.headerBar-Item.resumeContactButton {
     height: 60%;
     color: white;
     text-decoration: none;
     transition: background-color 0.4s ease-in-out, filter 0.2s ease
 }
 
-.resumeButton:hover {
+.resumeContactButton:hover {
     filter: brightness(0.85);
 }
 
-.resumeButton.section1 {
+.resumeContactButton.section1 {
     background-color: #3DBCB8; 
 }
 
-.resumeButton.section2 {
-    background-color: #883dcf; 
+.resumeContactButton.section2 {
+    background-color: #ad65f0; 
 }
 
-.resumeButton.section3 {
+.resumeContactButton.section3 {
     background-color: #994708; 
 }
 
-.resumeButton.section4 {
+.resumeContactButton.section4 {
     background-color: #B85C7A; 
 }

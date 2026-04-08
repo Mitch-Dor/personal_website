@@ -73,7 +73,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -129,7 +128,6 @@
     width: calc(100% - 40px);
     font-size: 1em;
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
     padding: 10px;
     background-color: white;
@@ -147,10 +145,10 @@
 }
 
 .descriptionTitle, .skillsFromProjectTitle {
-    width: 80%;
+    width: 100%;
     height: 30px;
     padding: 5px;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: black;
     display: flex;
@@ -159,10 +157,6 @@
     margin-bottom: 15px;
     position: relative;
     text-decoration: underline;
-}
-
-.skillsFromProjectTitle {
-    width: 100%;
 }
 
 .clickMeIcon {
@@ -191,10 +185,8 @@
 .projectDescription, .projectSkillsList {
     width: 100%;
     height: calc(100% - 45px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.65rem;
+    overflow-y: scroll;
+    font-size: 0.8rem;
 }
 
 .skillsFromProject {
@@ -205,7 +197,16 @@
     border-radius: 8px; /* rounded corners help */
     padding: 20px;
     position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.interactive-button.portfolioSection {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: #B85C7A; 
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
 }
 
 @media (max-width: 720px) {

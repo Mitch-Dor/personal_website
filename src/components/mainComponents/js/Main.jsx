@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-
-import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
 import Intro from './Intro';
 import Education from './Education';
 import Portfolio from './Portfolio';
@@ -18,9 +16,10 @@ function Main() {
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
   const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
   const endSectionThree = sectionHeight * 3 + (spacerDist*5)/2;
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
-    const snapThreshold = 200; // px
+    const snapThreshold = 80; // px
 
     let timeout;
 
@@ -56,8 +55,33 @@ function Main() {
   return (
     <>
       <div id="mainContainer">
-        < HeaderBar endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} sectionHeight={sectionHeight} spacerDist={spacerDist} handleScroll={handleScroll} />
-        < Intro />
+        {showContact && (
+          <div
+              className="modal-overlay"
+              onClick={() => setShowContact(false)}
+          >
+              <div
+                  className="modal-box"
+                  onClick={(e) => e.stopPropagation()}
+              >
+                  <button
+                      className="modal-close"
+                      onClick={() => setShowContact(false)}
+                  >✕</button>
+                  <h2 className="modal-title">Contact Me</h2>
+                  <div className="modal-item">
+                      <span className="modal-label">📞 Phone</span>
+                      <span className="modal-value">(610) 227-5052</span>
+                  </div>
+                  <div className="modal-item">
+                      <span className="modal-label">✉️ Email</span>
+                      <span className="modal-value">mitchdor48@gmail.com</span>
+                  </div>
+              </div>
+          </div>
+      )}
+        < HeaderBar endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} sectionHeight={sectionHeight} spacerDist={spacerDist} handleScroll={handleScroll} setShowContact={setShowContact} />
+        < Intro setShowContact={setShowContact} />
         <div className="spacer" id="firstSpacer"></div>
         < Work />
         <div className="spacer" id="secondSpacer"></div>

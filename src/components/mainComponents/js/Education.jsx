@@ -35,7 +35,7 @@ function Education({sectionStart}) {
             </div>
             <div className="educationBottom">
             <div id="TAList" className="educationList">
-                <div className="education-BC-highlights-title">Beyond Classes</div>
+                <div className="education-BC-highlights-title">Beyond Coursework</div>
                 <div className="education-BC-highlights-content">< BEYOND_CLASSES /></div>
             </div>
             <div className="educationCarousel">

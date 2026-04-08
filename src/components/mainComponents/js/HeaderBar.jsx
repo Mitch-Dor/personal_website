@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../css/headerBar.css';
 
-function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, sectionHeight, spacerDist, handleScroll}) {
+function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, sectionHeight, spacerDist, handleScroll, setShowContact}) {
     const [nearestSection, setNearestSection] = useState(1);
     
     useEffect(() => {
@@ -27,6 +27,9 @@ function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, sectionHeight
                 <div className="link-item" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Education</div>
                 <div className="link-item" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Portfolio</div>
             </div>
+            <div className={`headerBar-Item resumeContactButton interactive-button section${nearestSection}`} onClick={() => setShowContact(true)}>
+                Contact Me
+            </div>
             <div className="headerBar-Item socials">
                 <div className="socials-item">
                     <a href="https://www.linkedin.com/in/mitchelldorward/" target="_blank" rel="noopener noreferrer">
@@ -42,7 +45,7 @@ function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, sectionHeight
             <a
                 href="/assets/Mitchell_Dorward_Resume.pdf"
                 download
-                className={`headerBar-Item resumeButton interactive-button section${nearestSection}`}
+                className={`headerBar-Item resumeContactButton interactive-button section${nearestSection}`}
             >Resume</a>
         </div>
     )

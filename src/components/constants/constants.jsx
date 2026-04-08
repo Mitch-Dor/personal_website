@@ -4,7 +4,7 @@ export const INTRO_TEXT = () => {
         <span>
             {"a "}
             <span className="highlight-intro">professionally trained</span>
-            {" computer scientist who graduated from Lehigh's Rossin College of Engineering with a bachelors in computer science. I am a highly "}
+            {" computer scientist who graduated from Lehigh University's (a consistently top 50 rated U.S. school) Rossin College of Engineering with a bachelors in computer science. I am a highly "}
             <span className="highlight-intro">ethical</span>
             {", intelligent person who takes care to make the best products and decisions possible. I specialize in "}
             <span className="highlight-intro">software engineering</span>
@@ -19,7 +19,7 @@ export const DATA_ANNOTATION_DESCRIPTION = () => (
     <span>
         DataAnnotation is a company that specializes in providing high-quality{' '}
         <span className="highlight-work">training data</span> to AI agents.
-        It is my job to create complex, creative tasks that push AI models to{' '}
+        It is my job to create complex, creative tasks that push AI models, specifically <span className="highlight-work">LLMS</span> including <span className="highlight-work">Claude + Claude Code, ChatGPT + Codex, Gemini</span>, and more to{' '}
         <span className="highlight-work">failure</span> and then show them how to properly
         complete these tasks. I specialize in{' '}
         <span className="highlight-work">coding agents</span> but I also do some work with
@@ -41,8 +41,10 @@ export const DA_SKILLS = () => (
 export const BEYOND_CLASSES = () => (
     <span>
         <ul>
+            <li>I minored in <span className="highlight-education">Spanish</span> and enjoy the language and culture. I would consider myself <span className="highlight-education">proficient</span> in speaking and <span className="highlight-education">nearly fluent</span> in reading / writing.</li>
             <li>As a <span className="highlight-education">teacher's assistant</span> for CSE 348, Game AI I worked with students to increase their understanding of the course through <span className="highlight-education">office hours</span>.</li>
             <li>Other duties as a teacher's assistant included upgrading homework <span className="highlight-education">autograders</span> to be more <span className="highlight-education">dynamic and scalable</span>.</li>
+            <li>This work was largely <span className="highlight-education">self-directed</span>. My professor would give me specifications or ideas he wanted to implemented and I would have to take that and do my best to implement it. I never had <span className="highlight-education">templates</span>, all work was built <span className="highlight-education">from scratch</span>.</li>
             <li>I participated in many different <span className="highlight-education">music ensembles</span> at Lehigh. I learned to <span className="highlight-education">budget time</span> very effectively to balance classes, rehearsals, practicing, and my social life.</li>
         </ul>
     </span>
@@ -51,14 +53,14 @@ export const BEYOND_CLASSES = () => (
 export const SIGNIFICANT_CLASSES = () => (
     <span>
         <ul>
-            <li><span className="highlight-education">CSE 303 & CSE 202</span> - Operating Systems, <span className="highlight-education">Multi-Threaded Development</span>, Security (SHA-256 Hashing, Public/Private Keys, etc)</li>
-            <li><span className="highlight-education">CSE 326</span> - <span className="highlight-education">Machine Learning</span> Techniques</li>
-            <li><span className="highlight-education">CSE 216</span> - <span className="highlight-education">Software Engineering</span> (Agile Methodology, Sprints, Demoing, Peer Programming, Communication Software (Slack), Organization Software (Trello), SaaS, PaaS, IaaS)</li>
-            <li><span className="highlight-education">CSE 241</span> - <span className="highlight-education">Database Architecture & SQL</span></li>
-            <li><span className="highlight-education">CSE 340 & CSE 140</span> - <span className="highlight-education">Time Complexity</span>, Code Analysis, Common Algorithms (Dijkstra's, BFS, DFS, etc), <span className="highlight-education">Dynamic Programming</span></li>
-            <li><span className="highlight-education">CSE 262</span> - <span className="highlight-education">Compiler Design</span></li>
-            <li><span className="highlight-education">CSE 342</span> - Structure of the Internet, <span className="highlight-education">TCP, UDP</span>, Security (Packet Sniffing, Network Analysis, etc)</li>
-            <li><span className="highlight-education">CSE 348</span> - AI Techniques (<span className="highlight-education">A*, FSM, Generative Algorithms</span>, etc)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 340 & CSE 140">Design & Analysis of Algorithms + Foundations of Discrete Structures & Algorithms</span> - <span className="highlight-education">Theory</span>, <span className="highlight-education">Computational Complexity</span>, Code Analysis, Common Algorithms (Dijkstra's, BFS, DFS, etc), <span className="highlight-education">Dynamic Programming</span></li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 303 & CSE 202">Operating System Design + Computer Organization Architecture</span> - Operating Systems, <span className="highlight-education">Multi-Threaded Development</span>, Security (SHA-256 Hashing, Public/Private Keys, etc)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 216">Software Engineering</span> - <span className="highlight-education">Software Engineering</span> (Agile Methodology, Scrum, Demoing, Peer Programming, Project Management Tools (Trello, Atlassian, Jira), SaaS, PaaS, IaaS)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 241">Database Systems & Applications</span> - <span className="highlight-education">Database Architecture & SQL</span></li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 342">Fundamentals of Internetworking</span> - Structure of the Internet, <span className="highlight-education">TCP, UDP</span>, Security (Packet Sniffing, Network Analysis, etc)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 326">Machine Learning</span> - The <span className="highlight-education">Math</span> Behind Machine Learning (Kernels, Cross Validation, Gradient Descent)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 348">AI Game Programming</span> - AI Techniques (<span className="highlight-education">A*, Generative Algorithms</span>, etc)</li>
+            <li><span className="highlight-education-class" style={{ cursor: 'pointer' }} title="CSE 262">Programming Languages</span> - <span className="highlight-education">Compiler Design</span></li>
         </ul>
     </span>
 );
@@ -108,7 +110,7 @@ export const ENROLLD_ENHANCED_SKILLS = () => (
 export const OTHER_PROJECTS_DESCRIPTION = () => (
     <span>
         <ul>
-            <li><span style={{ fontWeight: 'bold' }}>What Other Projects Do I Have?</span> None of my other projects on GitHub are as extensive as Unite-Pro or Enrolld. Many are quick and dirty <span className="highlight-portfolio">tools, games, or websites</span> that I spun up in under a day to play with friends.</li>
+            <li><span style={{ fontWeight: 'bold' }}>What Other Projects Do I Have?</span> None of my other projects on GitHub are as extensive as Unite-Pro or Enrolld. Many are quick and dirty <span className="highlight-portfolio">tools, games, or websites</span> that I designed and implemented in under a day to play with friends.</li>
             <li><span style={{ fontWeight: 'bold' }}>A Specific Example:</span> In two days I spun up an online 'pickems' tracker with its own <span className="highlight-portfolio">postgreSQL database</span> in order to track how many times each person <span className="highlight-portfolio">picked the winning team</span>. This was done for a 200+ member draft league Discord I run.</li>
             <li><span style={{ fontWeight: 'bold' }}>Other Smaller Examples:</span> <span className="highlight-portfolio">Randomizers</span> for different games to dictate how me and my friends play games for an extra challenge. A <span className="highlight-portfolio">boids simulation</span> that had its behaviors changed to act like migratory birds.</li>
             <li><span style={{ fontWeight: 'bold' }}>This website</span> is also created and managed solely by me.</li>

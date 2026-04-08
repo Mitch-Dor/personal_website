@@ -24,7 +24,7 @@ const projectData = {
     "other": {
         video: { src: "/assets/Other-Project-Showcase.mp4", type: "video/mp4" },
         link: "https://github.com/Mitch-Dor",
-        name: "GitHub",
+        name: "Sidequests",
         Description: OTHER_PROJECTS_DESCRIPTION,
         Skills: OTHER_PROJECTS_SKILLS,
     },
@@ -48,7 +48,7 @@ function Portfolio() {
                     <div className={`portfolioProject ${portfolioProject === 'other' ? 'selected' : ''}`} onClick={() => {setPortfolioProject('other')}}>Other</div>
                     <div className={`portfolioProjectSelectorBar ${portfolioProject === 'unite-pro' ? 'left' : portfolioProject === 'enrolld' ? 'middle' : 'right'}`}></div>
                     </div>
-                    <video autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
+                    <video controls autoPlay loop muted playsInline className="projectVideo" key={portfolioProject}>
                     <source src={video.src} type={video.type} />
                     Your browser does not support the video tag.
                     </video>
@@ -56,12 +56,12 @@ function Portfolio() {
                 </div>
                 <div className="portfolioContentRight">
                 <div className="portfolioContentDescription">
-                    <a className="descriptionTitle" href={link} target="_blank" rel="noopener noreferrer">{name}
-                    <div className="clickMeIcon">
-                        <FaMousePointer className="MouseIcon" />
-                        <div className="clickMeText">Click Me For {portfolioProject === "enrolld" ? 'Demos!' : 'Site!'}</div>
+                    <div className="descriptionTitle">
+                        <a className="interactive-button portfolioSection" href={link} target="_blank" rel="noopener noreferrer">Site</a>
+                        {name}
                     </div>
-                    </a>
+                    {/* <a className="descriptionTitle" href={link} target="_blank" rel="noopener noreferrer">{name}
+                    </a> */}
                     <div className="projectDescription">
                         <Description />
                     </div>
