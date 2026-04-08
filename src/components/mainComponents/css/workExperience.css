@@ -1,289 +1,79 @@
-#workSection {
-    padding: 0;
+#work {
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    position: relative;
+    background: #38373C;
+    color: white;
 }
 
-.workTop {
-    width: 100%;
-    height: calc(15% - 30px);
-    background-color: #f7f7f7;
-    position: relative;
-    padding-bottom: 30px;
-}
-
-.workContactBar {
-    width: 100%;
+.work-content {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.workContent {
-    height: calc(85% - 30px);
     width: 100%;
-    padding-top: 30px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    flex-flow: row wrap;
+    padding: 10% 30px 0px 30px;
 }
 
-.DASection {
+.work-DA-title {
+    height: 20%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 2rem;
+    background-color: #4A4850;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.work-DA-description {
+    height: 20%;
     width: 55%;
-    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 0.8rem;
 }
 
-.DATop {
-    width: 90%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.work-DA-description-header {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    padding-bottom: 10px;
 }
 
-.DALogo {
+.work-DA-skills {
+    height: 60%;
     width: 40%;
-    height: 100%;
-    background-color: black;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.DALogo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.DADescription {
-    width: 50%;
-    height: calc(100% - 40px);
-    padding: 20px;
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.DADescTitle {
-    height: 30px;
-    background-color: #00B39E;
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.DADescTopics {
-    width: 100%;
-    height: calc(100% - 45px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.myRole, .myLearning {
-    height: calc(100% - 10px);
-    width: 45%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: inset 0 4px 6px rgba(0,0,0,0.3);
-    margin-bottom: 10px;
-}
-
-.DABottom {
-    width: 80%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
-.DAExampleTasks {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
-    position: relative;
+.work-DA-skills-header {
+    font-size: 1rem;
+    text-decoration: underline;
 }
 
-.MonroeSection {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+.work-DA-skills-list {
+    overflow-y: scroll;
+    font-size: 0.8rem;
 }
 
-.MonroeSectionTop {
-    width: 90%;
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.work-DA-skills-list::-webkit-scrollbar {
+    display: none; 
 }
 
-.MonroeDescription {
-    width: 50%;
-    height: calc(100% - 40px);
-    padding: 20px;
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.MonroeDescTitle {
-    height: 30px;
-    background-color: #00B39E;
-    border-radius: 20px;
-    color: white;
+.work-DA-examples {
+    height: 60%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.MonroeDescTopics {
-    width: 100%;
-    height: calc(100% - 45px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.myRole, .myLearning, .myEffect, .myTasks {
-    height: calc(100% - 10px);
-    width: 45%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: inset 0 4px 6px rgba(0,0,0,0.3);
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.MonroeTitle { 
-    width: 40%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.MonroeLogo {
-    width: calc(40% - 40px);
-    height: calc(100% - 40px);
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.MonroeLogo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.MonroeSectionBottom {
-    width: 90%;
-    height: 35%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.MonroeAchievements {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
-    position: relative;
-}
-
-@media (max-width: 720px) {
-    .DATop {
-        flex-direction: column;
-        height: 65%;
-        width: 100%;
-    }
-    .DALogo {
-        width: 90%;
-        height: 20%;
-    }
-    .DADescription {
-        width: calc(90% - 20px);
-        height: calc(70% - 20px);
-        padding: 10px;
-        font-size: 12px;
-    }
-    .DABottom {
-        height: 30%;
-    }
-    .DAExampleTasks {
-        padding: 10px;
-        height: calc(100% - 20px);
-        width: calc(100% - 20px);
-    }
-    .MonroeSectionTop {
-        flex-direction: column;
-        width: 100%;
-        height: 70%;
-    }
-    .MonroeDescription {
-        height: calc(70% - 20px);
-        width: calc(95% - 20px);
-        padding: 10px;
-        font-size: 12px;
-    }
-    .MonroeLogo {
-        height: calc(25% - 20px);
-        width: calc(95% - 20px);
-        padding: 10px;
-    }
-    .MonroeSectionBottom {
-        width: 100%;
-        height: 25%;
-    }
-    .MonroeAchievements {
-        padding: 10px;
-        height: calc(100% - 20px);
-        width: calc(95% - 20px);
-    }
 }

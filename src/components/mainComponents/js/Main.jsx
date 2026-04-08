@@ -7,6 +7,7 @@ import Education from './Education';
 import Portfolio from './Portfolio';
 import Work from './Work';
 import '../css/main-core.css';
+import HeaderBar from './HeaderBar';
 
 function Main() {
   const viewportHeight = window.visualViewport.height;
@@ -55,17 +56,14 @@ function Main() {
   return (
     <>
       <div id="mainContainer">
-        < Intro endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} spacerDist={spacerDist} handleScroll={handleScroll} />
+        < HeaderBar endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} sectionHeight={sectionHeight} spacerDist={spacerDist} handleScroll={handleScroll} />
+        < Intro />
         <div className="spacer" id="firstSpacer"></div>
-        < Education />
-        <div className="spacer" id="secondSpacer">
-          <WaveSeparatorTop color={"#2C2C2C"} />
-        </div>
-        < Portfolio />
-        <div className="spacer" id="thirdSpacer">
-          <WaveSeparatorTop color={"#2C2C2C"} />
-        </div>
         < Work />
+        <div className="spacer" id="secondSpacer"></div>
+        < Education sectionStart={sectionAndSpacer*2} />
+        <div className="spacer" id="thirdSpacer"></div>
+        < Portfolio />
       </div>
     </>
   );

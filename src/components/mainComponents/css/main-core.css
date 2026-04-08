@@ -2,6 +2,8 @@ html, body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    font-size: 24px;
+    font-family: sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -46,19 +48,11 @@ body::-webkit-scrollbar {
 .spacer {
     height: var(--spacerHeight);
     position: relative;
-}
-
-#firstSpacer { 
-    background-color: #f7f7f7;
-}
-
-#secondSpacer {
-    background-color: #00796B;
-    /* background: linear-gradient(#00796B, #f7f7f7); */
+    background: #38373C;
 }
 
 #thirdSpacer {
-    background-color: #00796B;
+    background: linear-gradient(#C1A875, #00796B);
 }
 
 .textSection {
@@ -148,4 +142,24 @@ body::-webkit-scrollbar {
 .scale-on-scroll {
   transform: scale(var(--scale, 1));
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.highlight-intro {
+    color: #3DBCB8; 
+    font-weight: 600;
+}
+
+.highlight-work {
+    color: #883dcf; 
+    font-weight: 600;
+}
+
+.highlight-education {
+    color: #994708;
+    font-weight: 600;
+}
+
+.highlight-portfolio {
+    color: #B85C7A;
+    font-weight: 600;
 }

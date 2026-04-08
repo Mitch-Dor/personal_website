@@ -1,59 +1,58 @@
-import WaveSeparatorTop from '../../sideComponents/js/WaveSeparatorTop';
-import WaveSeparatorBottom from '../../sideComponents/js/WaveSeparatorBottom';
-import Listing from '../../sideComponents/js/Listing';
-import ContactBar from '../../sideComponents/js/ContactBar';
-import AnimatedBackground from '../../sideComponents/js/AnimatedBackgrounds';
-import ImageCarousel from '../../sideComponents/js/ImageCarousel';
-import TextBlock from '../../sideComponents/js/TextBlock';
-import { SKILLS, INTRO_CAROUSEL, INTRO_TEXT } from '../../constants/constants';
-
-import { FiDownload } from "react-icons/fi";
-
+import { useState } from 'react';
+import { INTRO_TEXT } from '../../constants/constants.jsx';
 import '../css/intro.css';
 
-function Intro({endSectionOne, endSectionTwo, endSectionThree, spacerDist, handleScroll}) {
+function Intro() {
+    const [showContact, setShowContact] = useState(false);
+
     return (
+        <>
         <div id="intro" className="section">
-            <div className="headerBar">
-            <AnimatedBackground section={"headerBar"} />
-            <a 
-                href="/assets/Mitchell_Dorward_Resume.pdf" 
-                download 
-                className="downloadResume"
-            >
-                < FiDownload className="downloadIcon" />
-                Resume
-            </a>
-            <div className="headerPhoto">
-                <img style={{transform: "scaleX(-1)"}} src="./assets/MeHeadshot.png"></img>
-            </div>
-            <div className="headerTextPortion">
-                <div className="headerName">
-                <div className="name">Mitchell Dorward</div>
-                <div className="title">Computer Science Engineer</div>
+            {showContact && (
+                <div
+                    className="modal-overlay"
+                    onClick={() => setShowContact(false)}
+                >
+                    <div
+                        className="modal-box"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="modal-close"
+                            onClick={() => setShowContact(false)}
+                        >✕</button>
+                        <h2 className="modal-title">Contact Me</h2>
+                        <div className="modal-item">
+                            <span className="modal-label">📞 Phone</span>
+                            <span className="modal-value">(610) 227-5052</span>
+                        </div>
+                        <div className="modal-item">
+                            <span className="modal-label">✉️ Email</span>
+                            <span className="modal-value">mitchdor48@gmail.com</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="contactMe">
-                < ContactBar />
+            )}
+
+            <div className="intro-content">
+                <img className="intro-personal-image" style={{transform: "scaleX(-1)"}} src="./assets/MeHeadshot.png" />
+                <div className="intro-about-me">
+                    <div className="intro-personal-description">
+                        <div className="title">I am Mitchell Dorward...</div>
+                        <div className="body">< INTRO_TEXT /></div>
+                    </div>
+                    <div className="intro-interactive-buttons">
+                        <div
+                            className="interactive-button"
+                            id="Contact"
+                            onClick={() => setShowContact(true)}
+                        >Contact Me</div>
+                    </div>
                 </div>
-                <div className="links">
-                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionOne + spacerDist/2)}>Education</div>
-                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionTwo + spacerDist/2)}>Personal Projects</div>
-                <div className="linkItem headerItemClickable" onClick={() => handleScroll(endSectionThree + spacerDist/2)}>Work History</div>
-                </div>
-            </div>
-            <WaveSeparatorTop color={"#2C2C2C"} />
-            </div>
-            <div className="introContent">
-            <WaveSeparatorBottom color={"#2C2C2C"} />
-            <div className="skillsArea">
-                < TextBlock title={"About Me"} body={INTRO_TEXT} />
-            </div>
-            <div className="introCarousel">
-                <ImageCarousel images={INTRO_CAROUSEL} />
-            </div>
             </div>
         </div>
-    )
+        </>
+    );
 }
 
 export default Intro;

@@ -3,9 +3,8 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { SlClose } from "react-icons/sl";
 import "../css/imageCarousel.css";
 
-export default function ImageCarousel({ images, interval = 5000 }) { // interval in ms
+export default function ImageCarousel({ images, section, interval = 5000 }) { // interval in ms
   const [current, setCurrent] = useState(0);
-  const [popUp, setPopUp] = useState(null);
   const [direction, setDirection] = useState("right"); // This is the direction the images move
   const [prevIndex, setPrevIndex] = useState(null);
 
@@ -39,19 +38,7 @@ export default function ImageCarousel({ images, interval = 5000 }) { // interval
   }, [direction])
 
   return (
-    <>
-      {popUp && (
-        <div className="screenCover" onClick={() => {setPopUp(null)}}>
-          <div className="imageContainer">
-            <SlClose className="closePopUp" />
-            <div className={`carouselSlide active`} >
-              <img src={popUp.img} alt={popUp.desc} />
-              <div className="imageDesc">{popUp.desc}</div>
-            </div>
-          </div>
-        </div>
-      )}
-      <div className="customCarousel">
+      <div className={`customCarousel ${section}`}>
         <div className="arrow left" onClick={prev}>
           <FaChevronLeft />
         </div>
@@ -72,7 +59,6 @@ export default function ImageCarousel({ images, interval = 5000 }) { // interval
             <div
               key={i}
               className={className}
-              onClick={() => setPopUp(item)}
             >
               <img src={item.img} alt={item.desc} />
               <div className="imageDesc">{item.desc}</div>
@@ -80,6 +66,5 @@ export default function ImageCarousel({ images, interval = 5000 }) { // interval
           );
         })}
       </div>
-    </>
   );
 }

@@ -5,26 +5,12 @@
     padding: 0;
 }
 
-#professionalImage {
-    max-height: 400px;
-    max-width: 300px;
-    transform: scale(var(--scale, 1));
-}
-
 .educationTop {
     height: 10%;
     width: 100%;
-    background-color: #f7f7f7;
+    background: #38373C;;
     color: #FFFFFF;
     position: relative;
-}
-
-.educationContactMe {
-    position: absolute;
-    height: 100%;
-    width: 70%;
-    top: 0;
-    right: 0;
 }
 
 .educationMiddle {
@@ -88,10 +74,10 @@
 
 #lehighLogo {
     z-index: 5;
-    height: calc(100% + 160px);
+    height: calc(100% + 120px);
     width: auto;
     position: absolute;
-    top: -80px;
+    top: -60px;
     left: 5%;
     /* transform: translateX(-50%); */
 }
@@ -115,7 +101,7 @@
     height: 60%;
     width: calc(100% - 40px);
     position: relative;
-    background-color: #00796B;
+    background-color: #C1A875;
     color: #2C2C2C;
     display: flex;
     justify-content: space-between;
@@ -131,6 +117,10 @@
     border-radius: 8px; /* rounded corners help */
     padding: 20px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 .educationCarousel {
@@ -141,6 +131,25 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
     border-radius: 8px; /* rounded corners help */
     padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.education-BC-highlights-content, .education-classes-significance-content {
+    color: black;
+    font-size: 1rem;
+    overflow-y: scroll;
+    height: 85%;
+}
+
+
+.education-BC-highlights-title, .education-classes-significance-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+    height: 15%;
 }
 
 /* On mobile make it vertical */

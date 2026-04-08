@@ -3,190 +3,110 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    background: #38373C;
 }
 
-.headerBar {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    position: relative;
-    overflow: hidden; /* ensures SVG doesn’t overflow */
-}
-
-.headerPhoto {
-    width: calc(50% - 40px);
-    height: calc(100% - 40px);
-    padding: 20px;
-    object-fit: contain;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.headerPhoto img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 3px solid white;
-}
-
-.downloadResume {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1em;
-    cursor: pointer;
-    color: white;
-}
-
-.downloadIcon {
-    padding-bottom: 5px;
-    color: white;
-}
-
-.headerTextPortion {
-    width: calc(50% - 40px);
-    height: calc(100% - 40px);
-    padding: 20px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.headerName {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.name {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5em;
-    color: white;
-    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
-    font-weight: bold;
-    text-align: center;
-}
-
-.title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    font-weight: bold;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 25%;
-}
-
-.linkItem {
+.intro-content {
     height: 100%;
-    width: 33%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 10% 30px 0px 30px;
+}
+
+.intro-personal-image {
+    max-height: 80%;
+    max-width: 40%;
+}
+
+.intro-about-me {
+    max-height: 80%;
+    max-width: 50%;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+}
+
+.intro-personal-description .title {
+    font-size: 1.25rem;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.intro-interactive-buttons {
+    margin-top: 35px;
+    height: 50px;
+}
+
+.interactive-button {
+    aspect-ratio: 2 / 1;
+    background-color: #3DBCB8;
     cursor: pointer;
+    height: 100%;
+    font-size: 0.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    font-weight: bold;
-    text-align: center;
 }
 
-.headerItemClickable:hover {
+.interactive-button:hover {
     text-decoration: underline;
 }
 
-.introContent {
-    position: relative;
-    height: 50%;
-    padding: 2.5% 0px;
-    width: 100%;
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    z-index: 1;
-    background-color: #f7f7f7;
+    justify-content: center;
+    z-index: 1000;
 }
 
-.introCarousel {
-    z-index: 2;
-    width: 32%;
-    height: 80%;
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
-    margin-right: 20px;
-}
-
-.skillsArea {
-    z-index: 2;
-    height: 80%;
-    width: 50%;
-    background: white; /* Or a subtle tinted background */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* soft shadow */
-    border-radius: 8px; /* rounded corners help */
-    padding: 20px;
-    margin-left: 20px;
+.modal-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 300px;
     position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.contactMe {
-    width: 100%;
-    height: 20%;
-    font-size: 0.85em;
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #888;
 }
 
-@media (max-width: 720px) {
-  /* CSS here only applies when viewport width <= 720px (phones) */
-  .links {
-    font-size: 8px;
-  }
-  .headerTextPortion {
-    font-size: 12px;
-  }
-  .introContent {
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.25rem;
+}
+
+.modal-item {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-top: 5%;
-  }
-  .skillsArea {
-    height: calc(45% - 40px);
-    width: calc(90% - 40px);
-    margin: 0;
-  }
-  .introCarousel {
-    height: calc(45% - 40px);
-    width: calc(90% - 40px);
-    margin: 0;
-  }
-  .downloadResume {
-    left: 10px;
-  }
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.modal-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modal-value {
+    font-size: 1rem;
 }
