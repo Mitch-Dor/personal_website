@@ -22,7 +22,7 @@ const projectData = {
         Skills: ENROLLD_ENHANCED_SKILLS,
     },
     "other": {
-        video: { src: "/assets/Unite-Pro-Preview.mp4", type: "video/mp4" },
+        video: { src: "/assets/Other-Project-Showcase.mp4", type: "video/mp4" },
         link: "https://github.com/Mitch-Dor",
         name: "GitHub",
         Description: OTHER_PROJECTS_DESCRIPTION,

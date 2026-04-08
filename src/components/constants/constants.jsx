@@ -111,6 +111,7 @@ export const OTHER_PROJECTS_DESCRIPTION = () => (
             <li><span style={{ fontWeight: 'bold' }}>What Other Projects Do I Have?</span> None of my other projects on GitHub are as extensive as Unite-Pro or Enrolld. Many are quick and dirty <span className="highlight-portfolio">tools, games, or websites</span> that I spun up in under a day to play with friends.</li>
             <li><span style={{ fontWeight: 'bold' }}>A Specific Example:</span> In two days I spun up an online 'pickems' tracker with its own <span className="highlight-portfolio">postgreSQL database</span> in order to track how many times each person <span className="highlight-portfolio">picked the winning team</span>. This was done for a 200+ member draft league Discord I run.</li>
             <li><span style={{ fontWeight: 'bold' }}>Other Smaller Examples:</span> <span className="highlight-portfolio">Randomizers</span> for different games to dictate how me and my friends play games for an extra challenge. A <span className="highlight-portfolio">boids simulation</span> that had its behaviors changed to act like migratory birds.</li>
+            <li><span style={{ fontWeight: 'bold' }}>This website</span> is also created and managed solely by me.</li>
         </ul>
     </span>
 )
@@ -120,6 +121,7 @@ export const OTHER_PROJECTS_SKILLS = () => (
         <ul>
             <li><span className="highlight-portfolio">Programming is truly a love of mine.</span> I am extremely passionate about making tools that people enjoy.</li>
             <li>When I get involved in a project I can tend to <span className="highlight-portfolio">obsess</span> because I genuinely enjoy the process and payoff of creating a great product.</li>
+            <li>Most of my projects at the start have tended to be little interactive displays. Now, I have been trying to expand into learning other practices like understanding <span className="highlight-portfolio">3D modeling</span>. (3D Mesh Viewer in preview).</li>
         </ul>
     </span>
 )
