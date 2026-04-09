@@ -55,6 +55,10 @@ body::-webkit-scrollbar {
     background: linear-gradient(#C1A875, #00796B);
 }
 
+#fourthSpacer {
+    background: linear-gradient(#00796B, #38373C);
+}
+
 .textSection {
     width: 50%;
     height: 100%;
@@ -166,6 +170,11 @@ body::-webkit-scrollbar {
 
 .highlight-portfolio {
     color: #B85C7A;
+    font-weight: 600;
+}
+
+.highlight-outro {
+    color: #42914f;
     font-weight: 600;
 }
 

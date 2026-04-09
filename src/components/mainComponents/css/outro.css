@@ -1,0 +1,71 @@
+#outro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #38373C;
+}
+
+.outroTop {
+    height: 10%;
+    width: 100%;
+}
+
+.outroBody {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 45px;
+}
+
+.outroBodyContent {
+    flex: 1;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5% 0 0;
+}
+
+.outroSummary {
+    width: 90%;
+    height: 60%;
+    font-size: 1.25rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outroInteractive {
+    width: 90%;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interactive-button.section5 {
+    background: #42914f;
+    color: white;
+    text-decoration: none;
+}
+
+.outro-find-me {
+    color: white;
+}
+
+.outro-social-item, .outro-social-item a, .outro-social-item img {
+    height: 100%;
+    width: auto;
+}
+
+.outroBodyImage {
+    max-width: 55%;
+    max-height: 80%;
+}

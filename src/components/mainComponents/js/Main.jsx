@@ -6,6 +6,7 @@ import Portfolio from './Portfolio';
 import Work from './Work';
 import '../css/main-core.css';
 import HeaderBar from './HeaderBar';
+import Outro from './Outro';
 
 function Main() {
   const viewportHeight = window.visualViewport.height;
@@ -16,6 +17,7 @@ function Main() {
   const endSectionOne = sectionHeight + spacerDist/2; // The middle of the spacer after section 1
   const endSectionTwo = sectionHeight * 2 + (spacerDist*3)/2;
   const endSectionThree = sectionHeight * 3 + (spacerDist*5)/2;
+  const endSectionFour = sectionHeight * 4 + (spacerDist*7)/2;
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
@@ -80,7 +82,7 @@ function Main() {
               </div>
           </div>
       )}
-        < HeaderBar endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} sectionHeight={sectionHeight} spacerDist={spacerDist} handleScroll={handleScroll} setShowContact={setShowContact} />
+        < HeaderBar endSectionOne={endSectionOne} endSectionTwo={endSectionTwo} endSectionThree={endSectionThree} endSectionFour={endSectionFour} sectionHeight={sectionHeight} spacerDist={spacerDist} handleScroll={handleScroll} setShowContact={setShowContact} />
         < Intro setShowContact={setShowContact} />
         <div className="spacer" id="firstSpacer"></div>
         < Work />
@@ -88,6 +90,8 @@ function Main() {
         < Education sectionStart={sectionAndSpacer*2} />
         <div className="spacer" id="thirdSpacer"></div>
         < Portfolio />
+        <div className="spcaer" id="fourthSpacer"></div>
+        < Outro setShowContact={setShowContact} />
       </div>
     </>
   );

@@ -19,7 +19,7 @@ export const DATA_ANNOTATION_DESCRIPTION = () => (
     <span>
         DataAnnotation is a company that specializes in providing high-quality{' '}
         <span className="highlight-work">training data</span> to AI agents.
-        It is my job to create complex, creative tasks that push AI models, specifically <span className="highlight-work">LLMS</span> including <span className="highlight-work">Claude + Claude Code, ChatGPT + Codex, Gemini</span>, and more to{' '}
+        It is my job to create complex, creative tasks that push <span className="highlight-work">LLMs</span> <span className="highlight-work">(Claude + Claude Code, ChatGPT + Codex, Gemini)</span> to{' '}
         <span className="highlight-work">failure</span> and then show them how to properly
         complete these tasks. I specialize in{' '}
         <span className="highlight-work">coding agents</span> but I also do some work with
@@ -127,6 +127,24 @@ export const OTHER_PROJECTS_SKILLS = () => (
         </ul>
     </span>
 )
+
+export const OUTRO_FINAL = () => (
+    <span>
+        {"I am a "}
+        <span className="highlight-outro">diverse, professional</span>
+        {" computer science engineer who takes pride in building products that mean something. I bring a rare combination of "}
+        <span className="highlight-outro">formal computer science training</span>
+        {", end-to-end software experience, and a deep understanding of "}
+        <span className="highlight-outro">how AI thinks</span>
+        {" I thrive when given vague specifications that I can apply my full "}
+        <span className="highlight-outro">creativity</span>
+        {" to. I will always do everything to create the most polished, well-reasoned, and "}
+        <span className="highlight-outro">ethical</span>
+        {" solutions, whether I'm expanding a legacy codebase or building from scratch. Above all, I am someone who "}
+        <span className="highlight-outro">genuinely cares</span>
+        {" — about the code I write, the people who use it, and the teams I work with."}
+    </span>
+);
 
 // Image Carousels
 export const EDUCATION_CAROUSEL = [

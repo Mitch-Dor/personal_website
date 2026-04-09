@@ -19,7 +19,8 @@
 
 .intro-personal-image {
     max-height: 80%;
-    max-width: 40%;
+    width: 40%;
+    object-fit: contain;
 }
 
 .intro-about-me {
