@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { SlClose } from "react-icons/sl";
 import "../css/imageCarousel.css";
 
 export default function ImageCarousel({ images, section, interval = 5000 }) { // interval in ms
@@ -60,7 +59,11 @@ export default function ImageCarousel({ images, section, interval = 5000 }) { //
               key={i}
               className={className}
             >
-              <img src={item.img} alt={item.desc} />
+              {item.type === "video" ? (
+                <video src={item.src} controls autoPlay muted loop playsInline />
+              ) : (
+                <img src={item.img} alt={item.desc} />
+              )}
               <div className="imageDesc">{item.desc}</div>
             </div>
           );

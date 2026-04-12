@@ -153,7 +153,10 @@ export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/deansList.png', desc: "Made the Dean's List my last 5 semesters at Lehigh (out of 7 total)."}
 ];
 export const DA_CAROUSEL = [
-    {img: '/assets/DA.png', desc: "Placeholder"}
+    { type: "video", src: "assets/company_data_analysis.mp4", desc: "A big focus on what will make AI valuable is working with large datasets. I work with mock examples of real copmany environments to teach AI to do tasks like crisis prevention."},
+    { type: "video", src: "assets/trajectory_enhancement.mp4", desc: "AI can sometimes reason itself in circles. I analyze their reasoning and I can edit it so that even the reasoning is enhanced. This helps decreases number of tokens used and saves money."},
+    { img: '/assets/DA_large_repos.png', desc: "AI training focus has shifted toward SWE-bench tasks. These involve providing AI large repos and having them fix obscure bugs, add features, refactor, etc without providing context in the prompt." },
+    { img: '/assets/DA_collage.png', desc: "AI still has simple use cases like making stand alone projects. It has gotten significantly better at these, but still falls short on edge cases and obscure details sometimes." }
 ]
 
 

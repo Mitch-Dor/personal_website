@@ -21,7 +21,7 @@ function Work() {
                     </div>
                 </div>
                 <div className="work-DA-examples">
-                    < ImageCarousel images={DA_CAROUSEL} section="work" />
+                    < ImageCarousel images={DA_CAROUSEL} section="work" interval={10000} />
                 </div>
             </div>
         </div>
