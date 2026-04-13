@@ -4,7 +4,7 @@ export const INTRO_TEXT = () => {
         <span>
             {"a "}
             <span className="highlight-intro">professionally trained</span>
-            {" computer scientist who graduated from Lehigh University's (a consistently top 50 rated U.S. school) Rossin College of Engineering with a bachelors in computer science. I am a highly "}
+            {" computer scientist who graduated from Lehigh University's (a top-50 U.S. engineering school) Rossin College of Engineering with a bachelors in computer science. I am a highly "}
             <span className="highlight-intro">ethical</span>
             {", intelligent person who takes care to make the best products and decisions possible. I specialize in "}
             <span className="highlight-intro">software engineering</span>
@@ -31,7 +31,7 @@ export const DA_SKILLS = () => (
     <span>
         <ul>
             <li>My job is to push models to <span className="highlight-work">failure</span>. I know where AI <span className="highlight-work">thrives</span> and where it <span className="highlight-work">falls short</span>.</li>
-            <li>I view <span className="highlight-work">reasoning chains</span> and other information normally <span className="highlight-work">hidden</span> to most AI users. I understand how the AI <span className="highlight-work">thinks and reasons</span> to find its solution.</li>
+            <li>I view <span className="highlight-work">reasoning chains</span> and other information normally <span className="highlight-work">hidden</span> from most AI users. I understand how the AI <span className="highlight-work">thinks and reasons</span> to find its solution.</li>
             <li>I know common <span className="highlight-work">inefficiencies</span> and <span className="highlight-work">failure points</span> for AI models, which helps me build prompts and tools that minimize <span className="highlight-work">wasted tokens and time</span>.</li>
             <li>Because I need to <span className="highlight-work">double check</span> everything the AI outputs, I have become very adept at researching large <span className="highlight-work">codebases</span>, documentation, and the like.</li>
             <li>I have needed to <span className="highlight-work">integrate AI</span> into my daily workflow to increase efficiency. I know how to get the <span className="highlight-work">most out of AI</span> and make it work for you.</li>
@@ -135,8 +135,8 @@ export const OUTRO_FINAL = () => (
         {" computer science engineer who takes pride in building products that mean something. I bring a rare combination of "}
         <span className="highlight-outro">formal computer science training</span>
         {", end-to-end software experience, and a deep understanding of "}
-        <span className="highlight-outro">how AI thinks</span>
-        {" I thrive when given vague specifications that I can apply my full "}
+        <span className="highlight-outro">AI</span>
+        {". I thrive when given vague specifications that I can apply my full "}
         <span className="highlight-outro">creativity</span>
         {" to. I will always do everything to create the most polished, well-reasoned, and "}
         <span className="highlight-outro">ethical</span>
@@ -153,8 +153,8 @@ export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/deansList.png', desc: "Made the Dean's List my last 5 semesters at Lehigh (out of 7 total)."}
 ];
 export const DA_CAROUSEL = [
-    { type: "video", src: "assets/company_data_analysis.mp4", desc: "A big focus on what will make AI valuable is working with large datasets. I work with mock examples of real copmany environments to teach AI to do tasks like crisis prevention."},
-    { type: "video", src: "assets/trajectory_enhancement.mp4", desc: "AI can sometimes reason itself in circles. I analyze their reasoning and I can edit it so that even the reasoning is enhanced. This helps decreases number of tokens used and saves money."},
+    { type: "video", src: "assets/company_data_analysis.mp4", desc: "A key part of making AI valuable in real workplaces is teaching it to work with large datasets. I work with mock examples of real company environments to teach AI to do tasks like crisis prevention."},
+    { type: "video", src: "assets/trajectory_enhancement.mp4", desc: "AI can sometimes reason itself in circles. I analyze and refine their reasoning chains directly, which reduces token usage and saves cost."},
     { img: '/assets/DA_large_repos.png', desc: "AI training focus has shifted toward SWE-bench tasks. These involve providing AI large repos and having them fix obscure bugs, add features, refactor, etc without providing context in the prompt." },
     { img: '/assets/DA_collage.png', desc: "AI still has simple use cases like making stand alone projects. It has gotten significantly better at these, but still falls short on edge cases and obscure details sometimes." }
 ]
