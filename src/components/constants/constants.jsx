@@ -149,7 +149,7 @@ export const OUTRO_FINAL = () => (
 // Image Carousels
 export const EDUCATION_CAROUSEL = [
     {img: '/assets/carousel/education/music.jpg', desc: "Played trombone for Lehigh's: The Marching 97, Wind Ensemble, Jazz Orchestra, and Brass Ensemble."},
-    {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in Summer 2025'},
+    {img: '/assets/carousel/education/grad.png', desc: 'Graduated from Lehigh in January 2025'},
     {img: '/assets/carousel/education/deansList.png', desc: "Made the Dean's List my last 5 semesters at Lehigh (out of 7 total)."}
 ];
 export const DA_CAROUSEL = [
