@@ -68,8 +68,8 @@
     width: 100%;
 }
 
-#minors, #GPA {
-    width: 50%;
+#degreeInformation {
+    width: 90%;
     color: white;
     font-size: 1.25em;
     text-shadow:
@@ -84,16 +84,13 @@
     padding: 4px 12px;
     border-radius: 6px;
     backdrop-filter: blur(4px);
-}
-
-#minors {
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    text-align: center;
 }
 
-#GPA {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+#minors, #GPA {
+    width: 50%;
 }
 
 #lehighLogo {
@@ -110,14 +107,6 @@
     #lehighLogo {
         height: 55%;
         top: 22.5%;
-    }
-    #educationMiddleContent {
-        font-size: 10px;
-        right: 5%;
-        z-index: 2;
-    }
-    .educationContactMe {
-        width: 100%;
     }
 }
 
@@ -186,5 +175,18 @@
     .educationList, .educationCarousel {
         height: calc(30% - 40px);
         width: calc(100% - 40px);
+    }
+
+    #major{
+        font-size: 1rem;
+    }
+
+    #minors, #GPA {
+        font-size: 0.7rem;
+    }
+
+    .educationMiddle {
+        border-top: 2px solid black;
+        border-bottom: 4px solid black;
     }
 }

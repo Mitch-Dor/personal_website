@@ -69,3 +69,33 @@
     max-width: 55%;
     max-height: 80%;
 }
+
+@media (max-width: 720px) {
+    .outroSummary {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .outroBody {
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    .outroBodyContent {
+        height: 50%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .outroInteractive {
+        height: 30px;
+        width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .outroBodyImage {
+        max-height: 40%;
+        max-width: 80%;
+    }
+}

@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
-    padding: 10% 30px 0px 30px;
+    padding: calc(10vh + 20px) 30px 20px 30px;
 }
 
 .work-DA-title {
@@ -59,15 +59,12 @@
 .work-DA-skills-header {
     font-size: 1rem;
     text-decoration: underline;
+    text-align: center;
 }
 
 .work-DA-skills-list {
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 0.8rem;
-}
-
-.work-DA-skills-list::-webkit-scrollbar {
-    display: none; 
 }
 
 .work-DA-examples {
@@ -76,4 +73,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 720px){
+    .work-content{
+        flex-direction: column;
+    }
+
+    .work-DA-title {
+        width: 100%;
+        height: 10%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .work-DA-title img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .work-DA-description {
+        width: 100%;
+        height: 20%;
+    }
+
+    .work-DA-skills {
+        width: 100%;
+        height: 30%;
+    }
+
+    .work-DA-examples {
+        width: 100%;
+        height: 30%;
+    }
 }

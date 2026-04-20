@@ -29,7 +29,7 @@ function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, endSectionFou
                 <div className="link-item" onClick={() => handleScroll(endSectionFour + spacerDist/2)}>Outro</div>
             </div>
             <div className={`headerBar-Item links`}>
-                <div className={`headerBar-Item resumeContactButton interactive-button section${nearestSection}`} onClick={() => setShowContact(true)}>
+                <div className={`resumeContactButton interactive-button section${nearestSection}`} onClick={() => setShowContact(true)}>
                     Contact Me
                 </div>
                 <div className="socials-item">
@@ -45,7 +45,7 @@ function HeaderBar({endSectionOne, endSectionTwo, endSectionThree, endSectionFou
                 <a
                     href="/assets/Mitchell_Dorward_Resume.pdf"
                     download
-                    className={`headerBar-Item resumeContactButton interactive-button section${nearestSection}`}
+                    className={`resumeContactButton interactive-button section${nearestSection}`}
                 >Resume</a>
             </div>
         </div>

@@ -137,7 +137,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .portfolioContentDescription::-webkit-scrollbar {
@@ -185,7 +185,7 @@
 .projectDescription, .projectSkillsList {
     width: 100%;
     height: calc(100% - 45px);
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 0.8rem;
 }
 
@@ -212,6 +212,8 @@
 @media (max-width: 720px) {
   .portfolioContent {
     flex-direction: column;
+    justify-content: center;
+    gap: 0;
   }
 
   .portfolioContentLeft {

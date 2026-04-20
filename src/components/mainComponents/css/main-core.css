@@ -38,7 +38,8 @@ body::-webkit-scrollbar {
 }
 
 .section {
-    height: var(--sectionHeight);
+    /* height: var(--sectionHeight); */
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -237,4 +238,10 @@ li {
 
 .modal-value {
     font-size: 1rem;
+}
+
+@media (max-width: 1800px) {
+    html, body {
+        font-size: clamp(14px, calc(4px + 1.111vw), 24px);
+    }
 }
